@@ -1,0 +1,89 @@
+body {
+    border: 2px solid black;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #09272D;
+    color: #F8F9FA;
+    padding: 0;
+    margin: 0;
+}
+
+.ClimbForm {
+    height: 100%;
+}
+
+.form {
+    border: 2px solid black;
+    box-sizing: border-box;
+    position: relative;
+    width: 50%;
+    left: 0;
+    
+    padding: 20px;
+}
+
+.form select {
+    width: 80%;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding: 10px;
+    border: none;
+    background-color: #46c7a2;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+}
+
+.Navbar ul{
+    background-color: #07202B;
+    border-bottom: 2px solid black;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.Navbar li {
+    float: left;
+    display: inline;
+}
+
+.Navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.Navbar li a:hover {
+    background-color: #09272D;
+}
+
+.ShowClimbs {
+    display: block;
+    align-items: center;
+}
+
+.ShowClimbs .climb-list {
+    border: 2px solid black;
+    padding: 15px;
+    display: block;
+    width: 50%;
+}
+
+.Graph .Line {
+    background-color: #041b1f;
+}
