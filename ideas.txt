@@ -1,0 +1,37 @@
+Idea1:Grade converter
+Description1: Page where a user can input a
+french, norwegian or american grade, and get the corresponding
+grades in the different systems
+
+*****
+Idea2:Stat page
+Description2: Page where a user can see stats as:
+    - Best grade climbed
+    - Number of climbs climbed
+    - Where most of the climbs have been sent
+    - 
+
+*****
+Idea3:Home Page
+Description3: 
+User should be able to submit climbs:
+    - Sport/Boulder
+    - Grade
+    - Date
+    - Indoor/outdoor
+    - Location 
+        - Depending on indoor/outdoor
+User should be able to see climbs, filtered
+    - Based on the different criterias listed above
+
+*****
+Idea4: Climbing help-page
+Description: 
+Can include
+    - Useful websites to:
+        - Buy gear (Highlight gear on sale?)
+        - Read climbing news
+        - Watch climbing videos
+        - Learn about climbing 
+    - Find climbing centers
+        - Find climbing opportunities

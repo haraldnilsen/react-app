@@ -26,7 +26,7 @@ const ClimbList = (props) => {
   };
 
   return (
-    <div className="climbList">
+    <div className="climbList" key={id}>
       <h1>{title}</h1>
       {climbs.map((climb) => (
         <div className="climb-list" key={climb.id}>

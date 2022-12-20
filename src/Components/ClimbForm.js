@@ -49,8 +49,7 @@ const ClimbForm = () => {
   };
 
   return (
-    <div className="ClimbForm">
-      <ul></ul>
+    <div className="ClimbForm" key={3}>
       <form className="form" onSubmit={handleSubmit}>
         <label>Type of climbing*</label>
         <select
@@ -67,7 +66,7 @@ const ClimbForm = () => {
           onChange={(e) => setGrade(e.target.value)}
         >
           {gradesList.map((x) => (
-            <option value={x}>{x}</option>
+            <option value={x} key={x}>{x}</option>
           ))}
         </select>
         <label>Date</label>
@@ -76,7 +75,7 @@ const ClimbForm = () => {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

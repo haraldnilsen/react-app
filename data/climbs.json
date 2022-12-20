@@ -1,110 +1,16 @@
 {
   "climbs": [
     {
-      "climbType": "boulder",
-      "grade": "6C",
-      "date": "2022-09-25T08:52:19.845Z",
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2022-12-20T15:23:57.905Z",
       "id": 1
     },
     {
       "climbType": "boulder",
-      "grade": "6C+",
-      "date": "2022-09-25T08:52:30.353Z",
-      "id": 2
-    },
-    {
-      "climbType": "sport",
-      "grade": "6B",
-      "date": "2022-09-23",
-      "id": 3
-    },
-    {
-      "climbType": "sport",
-      "grade": "7A",
-      "date": "2022-09-21",
-      "id": 4
-    },
-    {
-      "climbType": "boulder",
-      "grade": "7A",
-      "date": "2022-09-19",
-      "id": 5
-    },
-    {
-      "climbType": "boulder",
       "grade": "6C",
-      "date": "2022-09-22",
-      "id": 6
-    },
-    {
-      "climbType": "boulder",
-      "grade": "6C+",
-      "date": "2022-09-23",
-      "id": 7
-    },
-    {
-      "climbType": "sport",
-      "grade": "7C",
-      "date": "2022-09-30",
-      "id": 8
-    }
-  ],
-  "grades": [
-    {
-      "Grade": "4",
-      "Value": 4
-    },
-    {
-      "Grade": "5",
-      "Value": 5
-    },
-    {
-      "Grade": "6A",
-      "Value": 6
-    },
-    {
-      "Grade": "6A+",
-      "Value": 7
-    },
-    {
-      "Grade": "6B",
-      "Value": 8
-    },
-    {
-      "Grade": "6B+",
-      "Value": 9
-    },
-    {
-      "Grade": "6C",
-      "Value": 10
-    },
-    {
-      "Grade": "6C+",
-      "Value": 11
-    },
-    {
-      "Grade": "7A",
-      "Value": 12
-    },
-    {
-      "Grade": "7A",
-      "Value": 13
-    },
-    {
-      "Grade": "7B",
-      "Value": 14
-    },
-    {
-      "Grade": "7B+",
-      "Value": 15
-    },
-    {
-      "Grade": "7C",
-      "Value": 16
-    },
-    {
-      "Grade": "7C+",
-      "Value": 17
+      "date": "2022-12-13",
+      "id": 2
     }
   ]
 }

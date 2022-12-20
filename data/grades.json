@@ -1,0 +1,60 @@
+{
+    "gradeValue": [
+      {
+        "grade": "4",
+        "value": 4
+      },
+      {
+        "grade": "5",
+        "value": 5
+      },
+      {
+        "grade": "6A",
+        "value": 6
+      },
+      {
+        "grade": "6A+",
+        "value": 7
+      },
+      {
+        "grade": "6B",
+        "value": 8
+      },
+      {
+        "grade": "6B+",
+        "value": 9
+      },
+      {
+        "grade": "6C",
+        "value": 10
+      },
+      {
+        "grade": "6C+",
+        "value": 11
+      },
+      {
+        "grade": "7A",
+        "value": 12
+      },
+      {
+        "grade": "7A",
+        "value": 13
+      },
+      {
+        "grade": "7B",
+        "value": 14
+      },
+      {
+        "grade": "7B+",
+        "value": 15
+      },
+      {
+        "grade": "7C",
+        "value": 16
+      },
+      {
+        "grade": "7C+",
+        "value": 17
+      }
+    ]
+  }

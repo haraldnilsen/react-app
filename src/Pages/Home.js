@@ -1,7 +1,6 @@
 import React from "react";
-import ClimbForm from "./ClimbForm";
-import GradeConverter from "./GradeConverter";
-import ShowClimbs from "./ShowClimbs";
+import ClimbForm from "../Components/ClimbForm";
+import ShowClimbs from "../Components/ShowClimbs";
 
 const Home = () => {
   return (

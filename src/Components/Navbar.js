@@ -1,3 +1,5 @@
+
+
 const Navbar = () => {
   return (
     <nav className="Navbar">
@@ -7,7 +9,13 @@ const Navbar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/graph">Graph of climbs</a>
+            <a href="/stats">Stats</a>
+          </li>
+          <li>
+            <a href="/converter">Grade Converter</a>
+          </li>
+          <li>
+            <a href="/info">Bibelen</a>
           </li>
         </ul>
       </div>
