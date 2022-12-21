@@ -1,0 +1,23 @@
+Problem1: Efficient grade convertion
+Solution1: 
+    Sport:
+        French
+        American
+        Norwegian
+    Bouldering:
+        French
+        V-grade
+*********
+
+Problem2: Reliable folder structure
+Solution2: Sort in the following way:
+    -- Components
+    ---- PageComponents
+    -- Pages
+    -- Styles
+    -- util
+    app.js
+**********
+
+Problem3: "Warning: Each child in a list should have a unique "key" prop."
+Solution: Sjekk alle option for å sjekke om den har en key

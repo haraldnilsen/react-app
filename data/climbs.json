@@ -2,15 +2,27 @@
   "climbs": [
     {
       "climbType": "sport",
-      "grade": "6A",
-      "date": "2022-12-20T15:23:57.905Z",
+      "grade": "6C",
+      "date": "2022-12-20",
       "id": 1
     },
     {
-      "climbType": "boulder",
-      "grade": "6C",
-      "date": "2022-12-13",
+      "climbType": "sport",
+      "grade": "7A",
+      "date": "2022-12-20",
       "id": 2
+    },
+    {
+      "climbType": "boulder",
+      "grade": "8C",
+      "date": "2022-12-07",
+      "id": 3
+    },
+    {
+      "climbType": "boulder",
+      "grade": "7A",
+      "date": "2022-12-14",
+      "id": 4
     }
   ]
 }

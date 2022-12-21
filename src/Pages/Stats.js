@@ -67,8 +67,8 @@ export const Stats = () => {
         <h2>All about your sends!</h2>
         <div className="bestClimb">
           <h3>Highest grade climbed:</h3>
-          <p>{(climbs.length == 0) ? "test" 
-          : findBestClimb().grade}</p>
+          <p>{(climbs.length == 0) ? "No sends registered. Go out and send!" 
+          : findBestClimb().grade + ". Date of ascend: " + findBestClimb().date}</p>
         </div>
         <div className="amountOfClimbs">
           <h3>Amount of sends:</h3>

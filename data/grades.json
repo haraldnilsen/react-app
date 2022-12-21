@@ -1,5 +1,5 @@
 {
-    "gradeValue": [
+    "frenchGradeValue": [
       {
         "grade": "4",
         "value": 4
@@ -37,7 +37,7 @@
         "value": 12
       },
       {
-        "grade": "7A",
+        "grade": "7A+",
         "value": 13
       },
       {
@@ -55,6 +55,156 @@
       {
         "grade": "7C+",
         "value": 17
+      },
+      {
+        "grade": "8A",
+        "value": 18
+      },
+      {
+        "grade": "8A+",
+        "value": 19
+      },
+      {
+        "grade": "8B",
+        "value": 20
+      },
+      {
+        "grade": "8B+",
+        "value": 21
+      },
+      {
+        "grade": "8C",
+        "value": 22
+      },
+      {
+        "grade": "8C+",
+        "value": 23
+      }
+    ], "nordicGradeValue": [
+      {
+        "grade": "4+",
+        "value": 4
+      },
+      {
+        "grade": "5-",
+        "value": 5
+      },
+      {
+        "grade": "5",
+        "value": 5
+      },
+      {
+        "grade": "5+",
+        "value": 5
+      },
+      {
+        "grade": "6-",
+        "value": 6
+      },
+      {
+        "grade": "6",
+        "value": 7
+      },
+      {
+        "grade": "6+",
+        "value": 8
+      },
+      {
+        "grade": "7-",
+        "value": 10
+      },
+      {
+        "grade": "7",
+        "value": 11
+      },
+      {
+        "grade": "7+",
+        "value": 12
+      },
+      {
+        "grade": "8-",
+        "value": 13
+      },
+      {
+        "grade": "8",
+        "value": 15
+      },
+      {
+        "grade": "8+",
+        "value": 16
+      },
+      {
+        "grade": "9-",
+        "value": 17
+      },
+      {
+        "grade": "9",
+        "value": 18
+      }
+    ], "vGradeValue" : [
+      {
+        "grade": "V0",
+        "value": 4
+      },
+      {
+        "grade": "V1",
+        "value": 5
+      },
+      {
+        "grade": "V2",
+        "value": 6
+      },
+      {
+        "grade": "V3",
+        "value": 7
+      },
+      {
+        "grade": "V4",
+        "value": 9
+      },
+      {
+        "grade": "V5",
+        "value": 10
+      },
+      {
+        "grade": "V6",
+        "value": 12
+      },
+      {
+        "grade": "V7",
+        "value": 13
+      },
+      {
+        "grade": "V8",
+        "value": 15
+      },
+      {
+        "grade": "V9",
+        "value": 16
+      },
+      {
+        "grade": "V10",
+        "value": 17
+      },
+      {
+        "grade": "V11",
+        "value": 18
+      },
+      {
+        "grade": "V12",
+        "value": 19
+      },
+      {
+        "grade": "V13",
+        "value": 20
+      },
+      {
+        "grade": "V14",
+        "value": 21
+      },
+      {
+        "grade": "V15",
+        "value": 22
       }
     ]
   }
