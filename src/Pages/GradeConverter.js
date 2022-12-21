@@ -11,7 +11,6 @@ export const GradeConverter = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
-
     const selectGrades = () => {
         if (gradeType == "V-grade") {
             return vGrades;
