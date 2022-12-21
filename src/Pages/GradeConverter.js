@@ -3,31 +3,34 @@ import React, { useState, useEffect} from "react";
 export const GradeConverter = () => {
 
     const [climbType, setClimbType] = useState("sport");
-    const [gradeType, setGradeType] = useState("french");
+    const [grade, setGrade] = useState(null);
+    const [gradeType, setGradeType] = useState("French");
     const [frenchGrades, setFrenchGrades] = useState(null);
+    const [nordicGrades, setNordicGrades] = useState(null);
+    const [vGrades, setVGrades] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const handleClimbTypeChange = (e) => {
-        setClimbType(e.target.value);
+
+    const selectGrades = () => {
+        if (gradeType == "V-grade") {
+            return vGrades;
+        } else if (gradeType == "Norwegian") {
+            return nordicGrades;
+        } else {
+            return frenchGrades;
+        }
     }
 
-    const handleGradeTypeChange = (e) => {
-        setGradeType(e.target.value);
-    }
-
-    const selectGrade = () => {
+    const selectClimb = () => {
         if (climbType == "sport") {
-            return ["French", "Norwegian", "American"];
+            return ["French", "Norwegian"];
         } else {
             return ["French", "V-grade"];
         }
     }
 
-    const [grades, setGrades] = useState(null);
-
     useEffect(() => {
-
         // npx json-server --watch data/grades.json --port 8080
         fetch("http://localhost:8080/frenchGradeValue")
         .then((res) => {
@@ -35,6 +38,30 @@ export const GradeConverter = () => {
         })
         .then((data) => {
             setFrenchGrades(data);
+            setIsLoaded(false);
+        }, (error) => {
+            setIsLoaded(true);
+            setError(error);
+        });
+
+        fetch("http://localhost:8080/nordicGradeValue")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            setNordicGrades(data);
+            setIsLoaded(false);
+        }, (error) => {
+            setIsLoaded(true);
+            setError(error);
+        });
+
+        fetch("http://localhost:8080/vGradeValue")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            setVGrades(data);
             setIsLoaded(true);
         }, (error) => {
             setIsLoaded(true);
@@ -51,17 +78,15 @@ export const GradeConverter = () => {
         <div className="GradeConverter">
             <h2>Grade Converter</h2>
             <form className="converter">
-                <select onChange={(e) => handleClimbTypeChange(e)}>
+                <select onChange={(e) => setClimbType(e.target.value)}>
                     <option value="sport">Sport</option>
                     <option value="bouldering">Bouldering</option>
                 </select>
-                <select>
-                    {selectGrade().map(arrayItem => <option value={arrayItem} key={arrayItem}>{arrayItem}</option>)}
+                <select onChange={(e) => setGradeType(e.target.value)}>
+                    {selectClimb().map(x => <option value={x} key={x}>{x}</option>)}
                 </select>
-                <select>
-                {frenchGrades.map((x) => (
-                    <option value={x.grade} key={x.grade}>{x.grade}</option>
-                 ))}
+                <select >
+                    {selectGrades().map(x => <option value={x.grade} key={x.grade}>{x.grade}</option>)}
                 </select>
             </form>
         </div>

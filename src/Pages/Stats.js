@@ -23,7 +23,7 @@ export const Stats = () => {
       });
 
       // npx json-server --watch data/grades.json --port 8080
-      fetch("http://localhost:8080/gradeValue")
+      fetch("http://localhost:8080/frenchGradeValue")
       .then((res) => {
         return res.json();
       })
