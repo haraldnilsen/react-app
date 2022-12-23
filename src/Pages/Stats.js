@@ -39,7 +39,7 @@ export const Stats = () => {
   //Finds the highest graded route of all routes
   function findBestClimb () {
     if (climbs.length === 0) {
-      return "No climbs registered"
+      return "No sends registered. Go out and send!";
     }
 
     let result = climbs[0];
@@ -53,7 +53,8 @@ export const Stats = () => {
       }
     }
 
-    return result;
+    const { grade, date } = result;
+    return `${grade}. Date of ascend: ${date}`;
   }
 
   // Hvis det oppstår error under lasting av data
@@ -66,9 +67,8 @@ export const Stats = () => {
     <div className="Stats">
         <h2>All about your sends!</h2>
         <div className="bestClimb">
-          <h3>Highest grade climbed:</h3>
-          <p>{(climbs.length == 0) ? "No sends registered. Go out and send!" 
-          : findBestClimb().grade + ". Date of ascend: " + findBestClimb().date}</p>
+          <h3>Highest grades climbed:</h3>
+          <p>{findBestClimb()}</p>
         </div>
         <div className="amountOfClimbs">
           <h3>Amount of sends:</h3>

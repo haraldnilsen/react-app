@@ -3,70 +3,66 @@ import React, { useState, useEffect} from "react";
 export const GradeConverter = () => {
 
     const [climbType, setClimbType] = useState("sport");
-    const [grade, setGrade] = useState(null);
+    
     const [gradeType, setGradeType] = useState("French");
     const [frenchGrades, setFrenchGrades] = useState(null);
     const [nordicGrades, setNordicGrades] = useState(null);
     const [vGrades, setVGrades] = useState(null);
+
+    const [gradeValue, setGradeValue] = useState(4);
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
+    useEffect(() => {
+        Promise.all([
+            fetch("http://localhost:8080/frenchGradeValue"),
+            fetch("http://localhost:8080/nordicGradeValue"),
+            fetch("http://localhost:8080/vGradeValue")
+        ])
+        .then(([resFrench, resNordic, resV]) =>
+            Promise.all([resFrench.json(), resNordic.json(), resV.json()])
+        )
+        .then(([dataFrenchGrades, dataNordicGrades, dataVGrades]) => {
+            setFrenchGrades(dataFrenchGrades);
+            setNordicGrades(dataNordicGrades);
+            setVGrades(dataVGrades);
+            setIsLoaded(true);
+        }, (error) => {
+            setError(error);
+            setIsLoaded(true);
+        });
+    }, []);
+
     const selectGrades = () => {
-        if (gradeType == "V-grade") {
-            return vGrades;
-        } else if (gradeType == "Norwegian") {
-            return nordicGrades;
-        } else {
-            return frenchGrades;
-        }
+        return gradeType == "V-grade" ? vGrades
+            : gradeType == "Norwegian" ? nordicGrades
+            : frenchGrades;
     }
 
     const selectClimb = () => {
-        if (climbType == "sport") {
-            return ["French", "Norwegian"];
-        } else {
-            return ["French", "V-grade"];
-        }
+        // if sport -> french, norwegian else -> french, v-grade
+        return climbType == "sport" ? ["French", "Norwegian"] : ["French", "V-grade"];
     }
 
-    useEffect(() => {
-        // npx json-server --watch data/grades.json --port 8080
-        fetch("http://localhost:8080/frenchGradeValue")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            setFrenchGrades(data);
-            setIsLoaded(false);
-        }, (error) => {
-            setIsLoaded(true);
-            setError(error);
-        });
+    const convertGrade = () => {
+        let result = [];
 
-        fetch("http://localhost:8080/nordicGradeValue")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            setNordicGrades(data);
-            setIsLoaded(false);
-        }, (error) => {
-            setIsLoaded(true);
-            setError(error);
-        });
+        if (climbType == "sport") {
+            if (gradeType != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradeValue).grade)}
+            if (gradeType != "Norwegian") {result.push("Norwegian: " + nordicGrades.find(c => c.value == gradeValue).grade)}
+        } 
+        if (climbType == "bouldering") {
+            if (gradeType != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradeValue).grade)}
+            if (gradeType != "V-grade") {result.push("V-grade: " + vGrades.find(c => c.value == gradeValue).grade)}
+        }
 
-        fetch("http://localhost:8080/vGradeValue")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            setVGrades(data);
-            setIsLoaded(true);
-        }, (error) => {
-            setIsLoaded(true);
-            setError(error);
-        });
-    }, []);
+        // if (gradeType != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradeValue).grade)}
+        // if (gradeType != "V-grade") {result.push("V-grade: " + vGrades.find(c => c.value == gradeValue).grade)}
+        // if (gradeType != "Norwegian") {result.push("Norwegian: " + nordicGrades.find(c => c.value == gradeValue).grade)}
+        
+        return result;
+    }
 
     if (error) {
         return <div>Error: {error.message}</div>
@@ -84,10 +80,12 @@ export const GradeConverter = () => {
                 <select onChange={(e) => setGradeType(e.target.value)}>
                     {selectClimb().map(x => <option value={x} key={x}>{x}</option>)}
                 </select>
-                <select >
-                    {selectGrades().map(x => <option value={x.grade} key={x.grade}>{x.grade}</option>)}
+                <select onChange={(e) => setGradeValue(e.target.value)}> 
+                    {selectGrades().map(x => <option value={x.value} key={x.grade}>{x.grade}</option>)}
                 </select>
             </form>
+            <p>Is the same as:</p>
+            {convertGrade().map(c => <p key={c}>{c}</p>)}
         </div>
     )
 }

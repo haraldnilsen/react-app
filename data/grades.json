@@ -111,6 +111,10 @@
       },
       {
         "grade": "7-",
+        "value": 9
+      },
+      {
+        "grade": "7-/7",
         "value": 10
       },
       {
@@ -126,6 +130,10 @@
         "value": 13
       },
       {
+        "grade": "8-/8",
+        "value": 14
+      },
+      {
         "grade": "8",
         "value": 15
       },
@@ -138,8 +146,32 @@
         "value": 17
       },
       {
+        "grade": "9-/9",
+        "value": 18
+      },
+      {
         "grade": "9",
         "value": 18
+      },
+      {
+        "grade": "9+",
+        "value": 19
+      },
+      {
+        "grade": "10-",
+        "value": 20
+      },
+      {
+        "grade": "10-/10",
+        "value": 21
+      },
+      {
+        "grade": "10",
+        "value": 22
+      },
+      {
+        "grade": "10+",
+        "value": 23
       }
     ], "vGradeValue" : [
       {
@@ -159,6 +191,10 @@
         "value": 7
       },
       {
+        "grade": "V3/V4",
+        "value": 8
+      },
+      {
         "grade": "V4",
         "value": 9
       },
@@ -167,12 +203,20 @@
         "value": 10
       },
       {
+        "grade": "V5/V6",
+        "value": 11
+      },
+      {
         "grade": "V6",
         "value": 12
       },
       {
         "grade": "V7",
         "value": 13
+      },
+      {
+        "grade": "V7/V8",
+        "value": 14
       },
       {
         "grade": "V8",
@@ -205,6 +249,11 @@
       {
         "grade": "V15",
         "value": 22
+      },
+      {
+        "grade": "V16",
+        "value": 23
       }
+      
     ]
   }

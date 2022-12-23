@@ -1,10 +1,10 @@
 {
   "climbs": [
     {
-      "climbType": "boulder",
-      "grade": "7A",
-      "date": "2022-12-20",
-      "id": 1
+      "climbType": "sport",
+      "grade": "6C",
+      "date": "2022-12-06",
+      "id": 4
     }
   ]
 }
