@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import Moment from "moment";
 import { format } from "date-fns";
 
@@ -7,6 +7,9 @@ const ClimbList = (props) => {
   const title = props.title;
   const date = props.date;
   const id = props.id;
+  const grade = props.grade;
+  
+  const [sortedBy, setSortedBy] = useState("added");
 
   const formatString = (date) => {
     const year = date.slice(0, 4);
@@ -25,19 +28,34 @@ const ClimbList = (props) => {
     window.location.reload();
   };
 
+  const sortClimbs = () => {
+    console.log(sortedBy);
+  }
+
   return (
-    <div className="climbList" key={id}>
-      <h1>{title}</h1>
+    <div className="ml-64 p-4" key={id}>
+      <h1 className="text-4xl text-center font-bold text-primary py-6">{title}</h1>
+      <form>
+        <div className="pt-2">
+          <label for="sort">Sorted by: </label>
+          <select name="sort" onChange={e => setSortedBy(e.target.value)}>
+            <option value="added">Time added</option>
+            <option value="grade">Grade</option>
+            <option value="date">Date</option>
+          </select>
+        </div>
+      </form>
       {climbs.map((climb) => (
-        <div className="climb-list" key={climb.id}>
-          <h2>
+        <div className="border border-b-slate-300 p-6 my-2" key={climb.id}>
+          <h2 className="font-bold">
             {climb.climbType.charAt(0).toUpperCase() + climb.climbType.slice(1)}
           </h2>
-          <p>Grade = {climb.grade}</p>
-          <p>When = {formatString(climb.date)}</p>
-          <button onClick={() => handleClick(climb.id)}>Delete</button>
+          <p>Grade: {climb.grade}</p>
+          <p>When: {formatString(climb.date)}</p>
+          <button className="formelement--select" onClick={() => handleClick(climb.id)}>Delete</button>
         </div>
       ))}
+
     </div>
   );
 };

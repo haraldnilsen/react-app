@@ -1,23 +1,27 @@
+import * as logo from "../img/climbing-svgrepo-com-revert.svg";
 
-
-const Navbar = () => {
+export const Navbar = () => {
   return (
-    <nav className="Navbar">
-      <div className="links">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
+    <nav className="bg-primary shadow-xl py-5 px-32 ">
+      <div className="px-8 mx-auto flex justify-center p-1 [&>*]:text-white">
+        <div className="absolute left-10">
+          <a href="/" className="flex ">
+            <img className="h-8" src={logo.default} ></img>
+            <h3 className="pl-2 text-3xl text-white font-logo
+            ">Zendit</h3>
+          </a>
+        </div>
+        <div className="flex [&>*]:px-8">
+          <div>
             <a href="/stats">Stats</a>
-          </li>
-          <li>
+          </div>
+          <div>
             <a href="/converter">Grade Converter</a>
-          </li>
-          <li>
-            <a href="/info">Bibelen</a>
-          </li>
-        </ul>
+          </div>
+          <div>
+          <a href="/info">Bibelen</a>
+          </div>
+        </div>
       </div>
     </nav>
   );

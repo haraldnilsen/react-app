@@ -4,13 +4,14 @@ import Navbar from "./Components/Navbar"
 import Home from "./Pages/Home"
 import Stats from "./Pages/Stats"
 import Info from "./Pages/Info"
+import Charts from "./Pages/Charts";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GradeConverter from "./Pages/GradeConverter";
 
 const App = () => {
     return (
         <Router>
-            <div className="App">
+            <div className="h-screen ">
                 <Navbar />
                 <Switch>
                     <Route exact path="/">
@@ -24,6 +25,9 @@ const App = () => {
                     </Route>
                     <Route path="/info">
                         <Info/>
+                    </Route>
+                    <Route path="/charts">
+                        <Charts/>
                     </Route>
                 </Switch>
             </div>

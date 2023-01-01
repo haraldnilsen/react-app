@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import convertGrade from "../util/convertGrade";
 
 export const GradeConverter = () => {
 
@@ -45,22 +46,18 @@ export const GradeConverter = () => {
         return climbType == "sport" ? ["French", "Norwegian"] : ["French", "V-grade"];
     }
 
-    const convertGrade = () => {
+    const convertGrade = (climbtype, gradetype, gradevalue) => {
         let result = [];
 
-        if (climbType == "sport") {
-            if (gradeType != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradeValue).grade)}
-            if (gradeType != "Norwegian") {result.push("Norwegian: " + nordicGrades.find(c => c.value == gradeValue).grade)}
+        if (climbtype == "sport") {
+            if (gradetype != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradevalue).grade)}
+            if (gradetype != "Norwegian") {result.push("Norwegian: " + nordicGrades.find(c => c.value == gradevalue).grade)}
         } 
-        if (climbType == "bouldering") {
-            if (gradeType != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradeValue).grade)}
-            if (gradeType != "V-grade") {result.push("V-grade: " + vGrades.find(c => c.value == gradeValue).grade)}
+        if (climbtype == "bouldering") {
+            if (gradetype != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradevalue).grade)}
+            if (gradetype != "V-grade") {result.push("V-grade: " + vGrades.find(c => c.value == gradevalue).grade)}
         }
 
-        // if (gradeType != "French") {result.push("French: " + frenchGrades.find(c => c.value == gradeValue).grade)}
-        // if (gradeType != "V-grade") {result.push("V-grade: " + vGrades.find(c => c.value == gradeValue).grade)}
-        // if (gradeType != "Norwegian") {result.push("Norwegian: " + nordicGrades.find(c => c.value == gradeValue).grade)}
-        
         return result;
     }
 
@@ -70,25 +67,29 @@ export const GradeConverter = () => {
         return <div>Loading...</div>
       } else {
     return (
-        <div className="GradeConverter">
-            <h2>Grade Converter</h2>
-            <form className="converter">
-                <select onChange={(e) => setClimbType(e.target.value)}>
-                    <option value="sport">Sport</option>
-                    <option value="bouldering">Bouldering</option>
-                </select>
-                <select onChange={(e) => setGradeType(e.target.value)}>
-                    {selectClimb().map(x => <option value={x} key={x}>{x}</option>)}
-                </select>
-                <select onChange={(e) => setGradeValue(e.target.value)}> 
-                    {selectGrades().map(x => <option value={x.value} key={x.grade}>{x.grade}</option>)}
-                </select>
-            </form>
-            <p>Is the same as:</p>
-            {convertGrade().map(c => <p key={c}>{c}</p>)}
+        <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center w-max p-10 mt-12 border">
+                <h2 className="font-bold text-xl text-green-700 border-b-2">Grade Converter</h2>
+                <form className="py-3">
+                    <select className="formelement--select" onChange={(e) => setClimbType(e.target.value)}>
+                        <option value="sport">Sport</option>
+                        <option value="bouldering">Bouldering</option>
+                    </select>
+                    <select className="formelement--select" onChange={(e) => setGradeType(e.target.value)}>
+                        {selectClimb().map(x => <option value={x} key={x}>{x}</option>)}
+                    </select>
+                    <select className="formelement--select" onChange={(e) => setGradeValue(e.target.value)}> 
+                        {selectGrades().map(x => <option value={x.value} key={x.grade}>{x.grade}</option>)}
+                    </select>
+                </form>
+                <p>Is the same as:</p>
+                {convertGrade(climbType, gradeType, gradeValue).map(c => <p key={c}>{c}</p>)}
+            </div>
         </div>
     )
 }
 }
+
+
 
 export default GradeConverter;

@@ -21,3 +21,52 @@ Solution2: Sort in the following way:
 
 Problem3: "Warning: Each child in a list should have a unique "key" prop."
 Solution: Sjekk alle option for å sjekke om den har en key
+
+**********
+
+Problem4: More efficient way to load data
+Solution4: 
+    Instead of:
+
+    fetch("http://localhost:8000/climbs")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setClimbs(data);
+      }, (error) => {
+        setError(error);
+        setIsLoaded(true);
+      });
+
+      // npx json-server --watch data/grades.json --port 8080
+      fetch("http://localhost:8080/frenchGradeValue")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setGrades(data);
+        setIsLoaded(true);
+      }, (error) => {
+        setIsLoaded(true);
+        setError(error);
+      });
+
+      use:
+
+      Promise.all([
+      fetch("http://localhost:8000/climbs"),
+      fetch("http://localhost:8080/frenchGradeValue")
+    ])
+    .then(([resClimbs, resGrades]) => 
+      Promise.all([resClimbs.json(), resGrades.json()])
+    )
+    .then(([dataClimbs, dataGrades]) => {
+      setClimbs(dataClimbs);
+      setGrades(dataGrades);
+      setIsLoaded(true);
+    }, (error) => {
+      setError(error);
+      setIsLoaded(true);
+    });
+

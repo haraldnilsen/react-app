@@ -21,8 +21,11 @@ User should be able to submit climbs:
     - Indoor/outdoor
     - Location 
         - Depending on indoor/outdoor
+
 User should be able to see climbs, filtered
     - Based on the different criterias listed above
+
+User should be able to sort climbs by grade/date/place etc.
 
 *****
 Idea4: Climbing help-page
@@ -35,3 +38,4 @@ Can include
         - Learn about climbing 
     - Find climbing centers
         - Find climbing opportunities
+

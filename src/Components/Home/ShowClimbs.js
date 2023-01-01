@@ -18,7 +18,7 @@ const ShowClimbs = () => {
   }, []);
 
   return (
-    <div className="ShowClimbs">
+    <div className="">
       {climbs && <ClimbList climbs={climbs} title="All Climbs" />}
     </div>
   );

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stat {
+    @apply px-10 flex flex-col justify-center items-center w-max py-2 m-2 border;
+}
+
+.stat--h3 {
+    @apply font-bold py-2;
+}

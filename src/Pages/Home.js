@@ -4,7 +4,7 @@ import ShowClimbs from "../Components/Home/ShowClimbs";
 
 const Home = () => {
   return (
-    <div className="Home">
+    <div className="">
       <ClimbForm />
       {/* <GradeConverter /> */}
       <ShowClimbs />

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.info-container {
+    @apply flex justify-center  my-5 py-3;
+}
+
+.info-headline {
+    @apply flex text-primary text-xl font-bold justify-center;
+}

@@ -2,9 +2,57 @@
   "climbs": [
     {
       "climbType": "sport",
-      "grade": "6C",
-      "date": "2022-12-06",
+      "grade": "6A",
+      "date": "2023-01-01T21:36:40.000Z",
+      "id": 1
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-01T21:36:41.351Z",
+      "id": 2
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-01T21:36:41.824Z",
+      "id": 3
+    },
+    {
+      "climbType": "sport",
+      "grade": "6B+",
+      "date": "2023-01-01T21:36:42.225Z",
       "id": 4
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-01T21:36:44.244Z",
+      "id": 5
+    },
+    {
+      "climbType": "sport",
+      "grade": "7A",
+      "date": "2023-01-01T21:36:44.816Z",
+      "id": 6
+    },
+    {
+      "climbType": "sport",
+      "grade": "6C+",
+      "date": "2023-01-01T21:36:47.510Z",
+      "id": 7
+    },
+    {
+      "climbType": "sport",
+      "grade": "6C",
+      "date": "2023-01-01T21:36:50.165Z",
+      "id": 8
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-01T21:36:52.154Z",
+      "id": 9
     }
   ]
 }

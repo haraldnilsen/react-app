@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "../../Styles/App.css"
 
 const ClimbForm = () => {
   const [climbType, setClimbType] = useState("sport");
@@ -49,36 +50,56 @@ const ClimbForm = () => {
   };
 
   return (
-    <div className="ClimbForm" key={3}>
-      <form className="form" onSubmit={handleSubmit}>
-        <label>Type of climbing*</label>
-        <select
-          value={climbType}
-          onChange={(e) => setClimbType(e.target.value)}
-        >
-          <option value="sport">Sport</option>
-          <option value="boulder">Boulder</option>
-        </select>
-        <label>Grade*</label>
-        <select
-          id="grade"
-          value={grade}
-          onChange={(e) => setGrade(e.target.value)}
-        >
-          {gradesList.map((x) => (
-            <option value={x} key={x}>{x}</option>
-          ))}
-        </select>
-        <label>Date</label>
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
-        <button type="submit">Submit</button>
+    <div className="form" key={3}>
+      <form className="p-2 m-3" onSubmit={handleSubmit}>
+        <div className="formelement">
+          <label className="font-bold">Type of climbing*</label>
+          <select className="formelement formelement--select"
+            value={climbType}
+            onChange={(e) => setClimbType(e.target.value)}
+          >
+            <option value="sport">Sport</option>
+            <option value="boulder">Boulder</option>
+          </select>
+        </div>
+        <div className="formelement">
+          <label className="font-bold">Indoor/Outdoor*</label>
+          <select className="formelement formelement--select"
+            value={climbType}
+            onChange={(e) => setClimbType(e.target.value)}
+          >
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+          </select>
+        </div>
+        <div className="formelement">
+          <label className="font-bold">Grade*</label>
+          <select
+            className="formelement formelement--select"
+            id="grade"
+            value={grade}
+            onChange={(e) => setGrade(e.target.value)}
+          >
+            {gradesList.map((x) => (
+              <option value={x} key={x}>{x}</option>
+            ))}
+          </select>
+        </div>
+        <div className="formelement">
+          <label className="font-bold">Date</label>
+          <input
+            className="formelement formelement--select"
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
+        <button className="formelement--submit bg-green-500" type="submit">Submit</button>
       </form>
     </div>
   );
 };
+
+
 
 export default ClimbForm;
