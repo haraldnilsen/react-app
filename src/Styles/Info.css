@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .info-container {
-    @apply flex justify-center  my-5 py-3;
+    @apply flex flex-col justify-center my-5 ;
 }
 
 .info-headline {
-    @apply flex text-primary text-xl font-bold justify-center;
+    @apply text-primary flex text-2xl font-bold justify-center py-6;
 }

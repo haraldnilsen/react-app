@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import "../Styles/Stats.css"
 import convertGrade from "./GradeConverter";
-import StatNavBar from "../Components/Stats/StatNavBar";
+import SubNavBar from "../Components/SubNavBar";
 
 export const Stats = () => {
   const [climbs, setClimbs] = useState(null);
@@ -81,7 +81,7 @@ export const Stats = () => {
   return (
     
     <div>
-        <StatNavBar />
+        <SubNavBar data={["/stats", "/charts"]}/>
         <div className="flex flex-col items-center">
 
           <h2 className="font-bold text-3xl text-green-700 p-6">All about your sends!</h2>

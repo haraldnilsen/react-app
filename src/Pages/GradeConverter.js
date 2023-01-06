@@ -67,10 +67,10 @@ export const GradeConverter = () => {
         return <div>Loading...</div>
       } else {
     return (
-        <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center w-max p-10 mt-12 border">
-                <h2 className="font-bold text-xl text-green-700 border-b-2">Grade Converter</h2>
-                <form className="py-3">
+        <div className="flex flex-col items-center ">
+            <div className="flex flex-col items-center w-max p-10 mt-12 border shadow-2xl">
+                <h2 className="font-bold text-xl text-primary border-b-2">Grade Converter</h2>
+                <form className="py-10 ">
                     <select className="formelement--select" onChange={(e) => setClimbType(e.target.value)}>
                         <option value="sport">Sport</option>
                         <option value="bouldering">Bouldering</option>
@@ -83,7 +83,7 @@ export const GradeConverter = () => {
                     </select>
                 </form>
                 <p>Is the same as:</p>
-                {convertGrade(climbType, gradeType, gradeValue).map(c => <p key={c}>{c}</p>)}
+                {convertGrade(climbType, gradeType, gradeValue).map(c => <p className="" key={c}>{c}</p>)}
             </div>
         </div>
     )

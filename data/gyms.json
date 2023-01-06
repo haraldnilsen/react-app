@@ -1,0 +1,54 @@
+{
+  "gyms": [
+      {   
+          "name": "BKS Laksevåg",
+          "city": "Bergen",
+          "picture": "https://6e44e4fae9.clvaw-cdnwnd.com/c7db98a5bff5da6adcdcaad928f0e182/200000124-c7087c803f/DSCF0064-1.jpg?ph=6e44e4fae9",
+          "homepage": "https://www.bergenklatresenter.no/en/",
+          "climbtype": "Bouldering",
+          "kilterboard": "true",
+          "moonboard": "false",
+          "about": "Good for beginners. Changes routes every week. Café where you can order food and drinks."
+      },
+      {
+          "name": "Vestveggen",
+          "city": "Bergen",
+          "picture": "https://www.datocms-assets.com/55942/1633526463-foto-trond-kristian-kalstoe.jpg",
+          "homepage": "https://bergenklatreklubb.no/klatrehall/vestveggen/",
+          "climbtype": "Lead-climbing and bouldering",
+          "kilterboard": "true",
+          "moonboard": "true",
+          "about": "Biggest and best center gym in the Nordics. Enough said."
+      },
+      {
+          "name": "Bryggeriet",
+          "city": "Bergen",
+          "picture": "https://bergenklatreklubb.no/wp-content/uploads/Bryggeriet3.jpg",
+          "homepage": "https://bergenklatreklubb.no/klatrehall/bryggeriet/",
+          "climbtype": "Bouldering",
+          "kilterboard": "false",
+          "moonboard": "true",
+          "about": "Local bouldering gym with both good overhang and slab climbing."
+      },
+      {
+          "name": "Buldrehallen",
+          "city": "Ålesund",
+          "picture": "https://media-cdn.tripadvisor.com/media/photo-s/13/03/55/2b/buldring.jpg",
+          "homepage": "https://www.buldrehallen.no",
+          "climbtype": "Bouldering",
+          "kilterboard": "false",
+          "moonboard": "true",
+          "about": "Good bouldering center in Ålesund."
+      },
+      {
+          "name": "Oslo Klatresenter",
+          "city": "Oslo",
+          "picture": "https://assets-global.website-files.com/57ab58d2e18710ca16407418/619f83b76eba1060f70214b6_Bilde%20nr%201___.jpg",
+          "homepage": "https://www.osloklatresenter.no",
+          "climbtype": "Lead climbing and ouldering",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "One of the biggest climbing gyms in Norway. Partly owned by Magnus Midtbø."
+      }
+  ]
+}

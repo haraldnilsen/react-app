@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import StatNavBar from "../Components/Stats/StatNavBar";
+import SubNavBar from "../Components/SubNavBar";
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
+import ChartComponent from "../Components/Charts/ChartComponent";
 
 export const Charts = () => {
     const [climbs, setClimbs] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [grades, setGrades] = useState(null);
+
+    const pages = ["stats"]
 
     useEffect(() => {
         // npx json-server --watch data/climbs.json --port 8000
@@ -36,66 +39,12 @@ export const Charts = () => {
       } else {
     return (
         <div className="">
-            <StatNavBar/>
-            <ChartComponent name="climbs" climbs={climbs}/>
+            <SubNavBar data={["/stats", "/charts"]}/>
+            <ChartComponent tittel="All boulders" climbs={climbs.filter(x => x.climbType === "boulder")}/>
+            <ChartComponent navn="Boulder" navnet="Boulder" tittel="All sport-routes" climbs={climbs.filter(x => x.climbType === "sport")}/>
         </div>
     );
 }
-}
-
-const ChartComponent = (props) => {
-    const name = props.name;
-    const climbs = props.climbs;
-    const grades = props.grades;
-
-    function filterData () {
-        let resultat = new Map();
-        let resultatet = new Map();
-
-        //creates a map with the grades as keys and amount of climbs as value
-        for (let i = 0; i < climbs.length; i++) {
-            let grade = climbs[i].grade;
-            if (resultat.has(grade) === false) {
-                resultat.set(grade, 1);
-            } else {
-                resultat.set(grade, resultat.get(grade) + 1)
-            }
-        } 
-        return resultat;
-    }
-
-    function sortData (climbMap) {
-
-    }
-    
-    const options = {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: name
-        },
-        xAxis: {
-            categories: [... filterData().keys()]
-        },
-        yAxis: {
-            title: {
-                text: 'Amount'
-            }
-        },
-        series: [{
-            data: [... filterData().values()]
-        }]
-        
-    }
-    
-    return (
-        <div>
-            <HighchartsReact 
-            highcharts={Highcharts}
-            options={options}/>
-        </div>
-    )
 }
 
 

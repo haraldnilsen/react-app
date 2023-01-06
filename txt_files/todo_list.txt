@@ -1,9 +1,14 @@
 20. desember
     1. Fiks grade-converter side
         1.1 Fiks gradering
-            Vise forskjellig output for sport og bulder
+                Vise forskjellig output for sport og bulder
+                Done
     2. Fiks forskjellig input for bulder og sport i home
 
 22. desember
     2. Refactor whole page / fiks struktur og kode
     3. Oppdater CSS
+
+3. januar
+    1. fiks sortering på graf
+    2. fiks farger på graf

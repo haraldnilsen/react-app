@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import Moment from "moment";
 import { format } from "date-fns";
+import Arrow from "../../img/arrow-up-down-svgrepo-com.svg"
 
 const ClimbList = (props) => {
   const climbs = props.climbs;
@@ -10,6 +11,7 @@ const ClimbList = (props) => {
   const grade = props.grade;
   
   const [sortedBy, setSortedBy] = useState("added");
+  const [reverse, setReverse] = useState(true);
 
   const formatString = (date) => {
     const year = date.slice(0, 4);
@@ -28,24 +30,43 @@ const ClimbList = (props) => {
     window.location.reload();
   };
 
-  const sortClimbs = () => {
-    console.log(sortedBy);
+  const sortClimbs = (climbList) => {
+    let resultat = climbList;
+    if (sortedBy === "grade") {
+      resultat = resultat.sort((a,b) => a.grade.localeCompare(b.grade));
+    } else if (sortedBy === "date") {
+      resultat = resultat.sort((a,b) => new Date(a.date) - new Date(b.date));
+    } else {
+      resultat = resultat.sort((a,b) => a.id - b.id);
+    }
+    if (reverse === false) {
+      resultat = resultat.reverse();
+    }
+    return resultat;
+  }
+
+  const toggleReverse = () => {
+    return setReverse(!reverse);
   }
 
   return (
     <div className="ml-64 p-4" key={id}>
       <h1 className="text-4xl text-center font-bold text-primary py-6">{title}</h1>
-      <form>
-        <div className="pt-2">
+      <div className="flex flex-row justify-between px-3">
+        <form className="">
           <label for="sort">Sorted by: </label>
           <select name="sort" onChange={e => setSortedBy(e.target.value)}>
             <option value="added">Time added</option>
             <option value="grade">Grade</option>
             <option value="date">Date</option>
           </select>
+        </form>
+        <div className="">
+            {/* Reverses the climblist when button is clicked */}
+            <input className="h-6" type="image" src={Arrow} onClick={() => setReverse(!reverse)} />
         </div>
-      </form>
-      {climbs.map((climb) => (
+      </div>
+      {sortClimbs(climbs).map((climb) => (
         <div className="border border-b-slate-300 p-6 my-2" key={climb.id}>
           <h2 className="font-bold">
             {climb.climbType.charAt(0).toUpperCase() + climb.climbType.slice(1)}
