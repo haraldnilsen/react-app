@@ -1,12 +1,6 @@
 {
   "climbs": [
     {
-      "climbType": "boulder",
-      "grade": "6B+",
-      "date": "2023-01-02",
-      "id": 1
-    },
-    {
       "climbType": "sport",
       "grade": "6C",
       "date": "2023-01-01",
@@ -191,6 +185,102 @@
       "grade": "7A",
       "date": "2023-01-04",
       "id": 33
+    },
+    {
+      "climbType": "boulder",
+      "grade": "7A",
+      "date": "2023-01-06",
+      "id": 34
+    },
+    {
+      "climbType": "sport",
+      "grade": "7C+",
+      "date": "2023-01-08T15:02:39.503Z",
+      "id": 35
+    },
+    {
+      "climbType": "boulder",
+      "grade": "6C+",
+      "date": "2023-01-11",
+      "id": 36
+    },
+    {
+      "climbType": "boulder",
+      "grade": "7B+",
+      "date": "2023-01-15",
+      "id": 37
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-15T13:41:22.322Z",
+      "id": 38
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-16",
+      "id": 39
+    },
+    {
+      "climbType": "sport",
+      "grade": "8A",
+      "date": "2023-01-15T19:26:25.226Z",
+      "id": 40
+    },
+    {
+      "climbType": "sport",
+      "grade": "6B",
+      "date": "2023-01-10",
+      "id": 41
+    },
+    {
+      "climbType": "sport",
+      "grade": "8B",
+      "date": "2023-01-16T08:48:51.003Z",
+      "id": 42
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-16T08:57:47.370Z",
+      "id": 43
+    },
+    {
+      "climbType": "indoor",
+      "grade": "7B+",
+      "date": "2023-01-28",
+      "id": 44
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-01-30T10:34:12.901Z",
+      "id": 45
+    },
+    {
+      "climbType": "boulder",
+      "grade": "7C+",
+      "date": "2023-02-20",
+      "id": 46
+    },
+    {
+      "climbType": "boulder",
+      "grade": "7A",
+      "date": "2023-02-21",
+      "id": 47
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-02-22T09:43:20.310Z",
+      "id": 48
+    },
+    {
+      "climbType": "sport",
+      "grade": "6A",
+      "date": "2023-02-22T09:43:23.742Z",
+      "id": 49
     }
   ]
 }

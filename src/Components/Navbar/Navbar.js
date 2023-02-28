@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import * as logo from "../img/climbing-svgrepo-com-revert.svg";
-import * as profile from "../img/profile-user-avatar-man-person-svgrepo-com.svg"
+import * as logo from "../../img/climbing-svgrepo-com-revert.svg";
+import * as profile from "../../img/profile-user-avatar-man-person-svgrepo-com.svg"
 
 export const Navbar = () => {
 

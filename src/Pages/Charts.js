@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SubNavBar from "../Components/SubNavBar";
+import SubNavBar from "../Components/Navbar/SubNavBar";
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import ChartComponent from "../Components/Charts/ChartComponent";

@@ -1,5 +1,5 @@
 import InfoElement from "../Components/Info/InfoElement";
-import SubNavBar from "../Components/SubNavBar";
+import SubNavBar from "../Components/Navbar/SubNavBar";
 import "../Styles/Info.css"
 
 

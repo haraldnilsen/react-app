@@ -1,12 +1,24 @@
 import React, { useState, useEffect} from "react";
 
-import SubNavBar from "../Components/SubNavBar";
+import SubNavBar from "../Components/Navbar/SubNavBar";
 import InfoElement from "../Components/Info/InfoElement";
+import SpotElement from "../Components/Info/SpotElement";
+import { parseZone } from "moment";
+import "../Styles/App.css"
 
 
 const Spots = () => {
     
+    //all gyms in norway
     const [gyms, setGyms] = useState(null);
+    //all cities with a registered gym
+    const [cities, setCities] = useState(null);
+    //city to filter list with
+    const [city, setCity] = useState("");
+    //show kilterboard
+    const [kilterChecked, setKilterChecked] = useState(false);
+    //show moonboard
+    const [moonChecked, setMoonChecked] = useState(false);
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -20,12 +32,41 @@ const Spots = () => {
         )
         .then(([dataGyms]) => {
             setGyms(dataGyms);
+            setCities([... new Set(dataGyms.map(x => x.city))]);
             setIsLoaded(true);
         }, (error) => {
             setError(error);
             setIsLoaded(true);
         });
     }, []);
+
+    const handleKilterChecked = () => {
+        setKilterChecked(!kilterChecked);
+    }
+
+    const handleMoonChecked = () => {
+        setMoonChecked(!moonChecked);
+    }
+
+    /*
+        Takes a string as input and filters the gym-list
+        according to which cities starts with the string
+    */
+    function filterCities (cityOption, kilterboardOption, moonboardOption) {
+        let resultat = gyms;
+        
+        if (kilterboardOption == true) {
+            resultat = resultat.filter(gym => gym.kilterboard == "true");
+        }
+        if (moonboardOption == true) {
+            resultat = resultat.filter(gym => gym.moonboard == "true");
+        }
+        if (cityOption != "") {
+            resultat = resultat.filter(gym => gym.city.startsWith(cityOption.toLowerCase()));
+        }
+        
+        return resultat;
+    }
     
     if (error) {
         return <div>Error: {error.message}</div>
@@ -35,45 +76,39 @@ const Spots = () => {
     return (
         <div>
             <SubNavBar data={["/gear", "/news", "/spots"]}/>
-            <div className="text-center w-96 h-36 p-4 mx-auto my-4">
+            <div className="text-center w-96 h-36 p-4 mx-auto mt-4">
                 <p className="">New to town and not sure where to climb? Just choose your city and we will show you all climbing-gyms near you!</p>
             </div>
             <div className="border-t-4 border-primary h-screen ">
                 <div className="h-screen shadow w-60 absolute ">
                     <div className="mx-auto flex flex-col p-3">
-                        <label >Choose city</label>
-                        <input name="city" className="shadow-lg border p-2"></input>
+                        <label className="spotform--label">City</label>
+                        <select className="formelement--select" onChange={(e) => setCity(e.target.value)} >
+                            <option></option>
+                            {cities.sort().map(city => <option value={city}>{city.charAt(0).toUpperCase()}{city.slice(1)}</option>)}
+                        </select>
+                        <div className="px-2 pt-6">
+                            <input id="kilterboard" type="checkbox" value={kilterChecked} onChange={handleKilterChecked} />
+                            <label for="kilterboard" className="spotform--label">Kilterboard</label>
+                        </div>
+                        <div className="px-2">
+                            <input id="moonboard" type="checkbox" value={moonChecked} onChange={handleMoonChecked}/>
+                            <label for="moonboard" className="spotform--label">Moonboard</label>
+                        </div>
+                        
                     </div>
                 </div>
                 <div className="ml-60 h-screen">
-                    {gyms.map(gym => 
+                    {filterCities(city, kilterChecked, moonChecked).map(gym => 
                         <React.Fragment key={gym.name}>
                             <SpotElement gym={gym} />
                         </React.Fragment>)}
-                        {/* <SpotElement gym={gyms[0]} /> */}
                 </div>
             </div>
             
         </div>
     )
     }
-}
-
-const SpotElement = (props) => {
-    return (
-        <div className=" h-64 my-5 flex ">
-            <div className="w-full px-4 py-2 flex-col">
-                <h2 className="p-4 bg-primary rounded text-white font-bold shadow text-center">{props.gym.name}</h2>
-                <div className="flex-col p-2">
-                    <p>{props.gym.about}</p>
-                    <p>Kilterboard: {props.gym.kilterboard}</p>
-                    <p>Moonboard: {props.gym.moonboard}</p>
-                    <p className="mt:auto">Homepage: {props.gym.homepage}</p>
-                </div>
-            </div>
-            <img className="w-60 my-7 ml-auto object-cover" src={props.gym.picture} />
-        </div>
-    )
 }
 
 export default Spots;

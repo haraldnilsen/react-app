@@ -21,6 +21,7 @@ User should be able to submit climbs:
     - Indoor/outdoor
     - Location 
         - Depending on indoor/outdoor
+    - Attempts
 
 User should be able to see climbs, filtered
     - Based on the different criterias listed above
@@ -38,4 +39,12 @@ Can include
         - Learn about climbing 
     - Find climbing centers
         - Find climbing opportunities
+
+*****
+Idea5: Climbing vocab
+Description: What is a beta? What does a flash mean? Etc.
+
+*****
+Idea6: Climbing material
+Description: List of all books/sites/ to read/watch
 

@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import "../Styles/Stats.css"
 import convertGrade from "./GradeConverter";
-import SubNavBar from "../Components/SubNavBar";
+import SubNavBar from "../Components/Navbar/SubNavBar";
 
 export const Stats = () => {
   const [climbs, setClimbs] = useState(null);

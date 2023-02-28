@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .info-container {
-    @apply flex flex-col justify-center my-5 ;
+    @apply flex flex-row justify-center my-5 ;
 }
 
 .info-headline {

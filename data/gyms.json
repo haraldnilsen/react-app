@@ -1,8 +1,18 @@
 {
   "gyms": [
+    {
+        "name": "Buldrehallen",
+        "city": "ålesund",
+        "picture": "https://media-cdn.tripadvisor.com/media/photo-s/13/03/55/2b/buldring.jpg",
+        "homepage": "https://www.buldrehallen.no",
+        "climbtype": "Bouldering",
+        "kilterboard": "false",
+        "moonboard": "true",
+        "about": "Good bouldering center in Ålesund."
+    },
       {   
-          "name": "BKS Laksevåg",
-          "city": "Bergen",
+          "name": "Bergen Klatresenter Laksevåg",
+          "city": "bergen",
           "picture": "https://6e44e4fae9.clvaw-cdnwnd.com/c7db98a5bff5da6adcdcaad928f0e182/200000124-c7087c803f/DSCF0064-1.jpg?ph=6e44e4fae9",
           "homepage": "https://www.bergenklatresenter.no/en/",
           "climbtype": "Bouldering",
@@ -11,8 +21,18 @@
           "about": "Good for beginners. Changes routes every week. Café where you can order food and drinks."
       },
       {
+        "name": "Bryggeriet",
+        "city": "bergen",
+        "picture": "https://bergenklatreklubb.no/wp-content/uploads/Bryggeriet3.jpg",
+        "homepage": "https://bergenklatreklubb.no/klatrehall/bryggeriet/",
+        "climbtype": "Bouldering",
+        "kilterboard": "false",
+        "moonboard": "true",
+        "about": "Local bouldering gym with both good overhang and slab climbing."
+    },
+      {
           "name": "Vestveggen",
-          "city": "Bergen",
+          "city": "bergen",
           "picture": "https://www.datocms-assets.com/55942/1633526463-foto-trond-kristian-kalstoe.jpg",
           "homepage": "https://bergenklatreklubb.no/klatrehall/vestveggen/",
           "climbtype": "Lead-climbing and bouldering",
@@ -21,34 +41,118 @@
           "about": "Biggest and best center gym in the Nordics. Enough said."
       },
       {
-          "name": "Bryggeriet",
-          "city": "Bergen",
-          "picture": "https://bergenklatreklubb.no/wp-content/uploads/Bryggeriet3.jpg",
-          "homepage": "https://bergenklatreklubb.no/klatrehall/bryggeriet/",
-          "climbtype": "Bouldering",
-          "kilterboard": "false",
-          "moonboard": "true",
-          "about": "Local bouldering gym with both good overhang and slab climbing."
-      },
-      {
-          "name": "Buldrehallen",
-          "city": "Ålesund",
-          "picture": "https://media-cdn.tripadvisor.com/media/photo-s/13/03/55/2b/buldring.jpg",
-          "homepage": "https://www.buldrehallen.no",
-          "climbtype": "Bouldering",
-          "kilterboard": "false",
-          "moonboard": "true",
-          "about": "Good bouldering center in Ålesund."
-      },
-      {
           "name": "Oslo Klatresenter",
-          "city": "Oslo",
+          "city": "oslo",
           "picture": "https://assets-global.website-files.com/57ab58d2e18710ca16407418/619f83b76eba1060f70214b6_Bilde%20nr%201___.jpg",
           "homepage": "https://www.osloklatresenter.no",
-          "climbtype": "Lead climbing and ouldering",
+          "climbtype": "Lead climbing and bouldering",
           "kilterboard": "false",
           "moonboard": "false",
           "about": "One of the biggest climbing gyms in Norway. Partly owned by Magnus Midtbø."
+      },
+      {
+          "name": "Trondheim Buldresenter",
+          "city": "trondheim",
+          "picture": "https://www.datocms-assets.com/55942/1636216787-klatregasellen-i-trondheim-crop1280.jpg?q=70&auto=format&w=980&fit=crop&crop=faces,focalpoint&iptc=allow&h=560",
+          "homepage": "https://ute.no/trondheimbuldresenter/",
+          "climbtype": "Bouldering",
+          "kilterboard": "false",
+          "moonboard": "true",
+          "about": "New and modern bouldering gym in Trondheim"
+      },
+      {
+          "name": "Sogndal Klatresenter",
+          "city": "sogndal",
+          "picture": "https://www.deltager.no/img/11564/s.jpg",
+          "homepage": "https://sogndal.spenst.no/komplett/",
+          "climbtype": "Lead-climbing and bouldering",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "Big climbing wall in Sogndal."
+      },
+      {
+          "name": "Vulkan Klatresenter",
+          "city": "oslo",
+          "picture": "https://vulkanoslo.no/wp-content/uploads/2019/04/klatresenter_1.jpg",
+          "homepage": "https://www.kolsaas.no/",
+          "climbtype": "Lead-climbing and bouldering",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "Climbing gym in Kolsås. Three climbing walls with everything from overhang to vertical walls."
+      },
+      {
+          "name": "Klatreverket Torshov",
+          "city": "oslo",
+          "picture": "https://api.bruce.app/v1/image//f_auto,w_940,c_fill,q_auto:good,ar_1.6/combine_studio_120_header.jpg",
+          "homepage": "https://klatreverket.no/torshov/",
+          "climbtype": "Bouldering",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "Bouldering gym in Torshov."
+      },
+      {
+          "name": "Klatreverket Bryn",
+          "city": "oslo",
+          "picture": "https://www.bryn-helsfyr.no/wp-content/uploads/Buldreverket5-1200x900.jpg",
+          "homepage": "https://klatreverket.no/bryn/",
+          "climbtype": "Bouldering",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "Bouldering gym in Bryn."
+      },
+      {
+          "name": "Bergen Klatresenter Fana",
+          "city": "bergen",
+          "picture": "https://6e44e4fae9.clvaw-cdnwnd.com/c7db98a5bff5da6adcdcaad928f0e182/200000384-5967759679/IMG_13061-9.jpg?ph=6e44e4fae9",
+          "homepage": "https://www.bergenklatresenter.no/en/bks-fana/",
+          "climbtype": "Bouldering",
+          "kilterboard": "true",
+          "moonboard": "false",
+          "about": "New bouldering gym located 20 minutes outside of Bergen."
+      },
+      {
+          "name": "Bergenshallen",
+          "city": "bergen",
+          "picture": "https://bergenklatreklubb.no/wp-content/uploads/20190128_061314-scaled-e1603395672870.jpg;",
+          "homepage": "https://bergenklatreklubb.no/klatrehall/bergenshallen/",
+          "climbtype": "Lead-climbing",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "Climbing gym with walls as high as 15 meters."
+      },
+      {
+          "name": "Høyt Under Taket Kokstad",
+          "city": "bergen",
+          "picture": "https://www.visitbergen.com/imageresizer/?image=%2Fdmsimgs%2FHoYTUNDERTAKET-PIA-10-13295028-_Foto_Pia_Eidenbom_2030454025.JPG&action=ProductDetailExtraLargeNew",
+          "homepage": "https://hoytundertaket.no/kokstad/",
+          "climbtype": "Bouldering and lead-climbing",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "about": "New climbing gym in Bergen, opened up by Magnus Midtbø."
+      },
+      {
+          "name": "Tromsø Klatresenter",
+          "city": "tromsø",
+          "picture": "https://www.datocms-assets.com/55942/1633536151-tromsoes-nye-klatreanlegg-er-ti-ganger-stoerre-enn-det-gamle.jpg",
+          "homepage": "https://www.tromsoklatresenter.no/",
+          "climbtype": "Bouldering and lead-climbing",
+          "kilterboard": "false",
+          "moonboard": "false",
+          "address": "Templarheimvegen 35",
+          "zip": "9010 Tromsø",
+          "about": "Modern bouldering- and climbing-gym in Tromsø. Walls up to 20 meters."
+      },
+      {
+          "name": "Buldreterminalen",
+          "city": "tromsø",
+          "picture": "https://bbaa4f3382.clvaw-cdnwnd.com/922679b79f4b3275931ec0e41c3ac894/200000047-2ce832ce85/Buldreterminalen%20-05563-6.jpg?ph=bbaa4f3382",
+          "homepage": "https://www.buldreterminalen.no/",
+          "climbtype": "Bouldering",
+          "kilterboard": "true",
+          "moonboard": "false",
+          "address": "Kvaløyvegen 329",
+          "zip": "9016 Tromsø",
+          "about": "Bouldering gym in Tromsø, opened in 2021."
       }
   ]
 }
