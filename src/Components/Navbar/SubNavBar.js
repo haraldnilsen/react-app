@@ -2,6 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const SubNavBar = (props) => {
+
+    let reverse = () => {
+
+    }
+
     return (
       <nav className="bg-secondary shadow-xl py-5 pl-14 w-screen transform " >
         <div className="flex" key={3}>

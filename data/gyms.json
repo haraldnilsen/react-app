@@ -86,7 +86,7 @@
           "picture": "https://api.bruce.app/v1/image//f_auto,w_940,c_fill,q_auto:good,ar_1.6/combine_studio_120_header.jpg",
           "homepage": "https://klatreverket.no/torshov/",
           "climbtype": "Bouldering",
-          "kilterboard": "false",
+          "kilterboard": "true",
           "moonboard": "false",
           "about": "Bouldering gym in Torshov."
       },

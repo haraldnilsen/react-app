@@ -16,6 +16,7 @@ export const Navbar = () => {
         </div>
         
         <div className="flex [&>*]:px-8">
+          <NavBarItem name="Climbs" link="/climbs" />
           <NavBarItem name="Stats" link="/stats"/>
           <NavBarItem name="Grade Converter" link="/converter"/>
           <NavBarItem name="Bibelen" link="/gear"/>

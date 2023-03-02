@@ -1,7 +1,8 @@
 import React from "react";
 import "./Styles/App.css";
 import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Pages/Home";
+import Climbs from "./Pages/Climbs";
+import Home from "./Pages/Home"
 import Stats from "./Pages/Stats";
 import Charts from "./Pages/Charts";
 import Gear from "./Pages/Gear";
@@ -18,6 +19,9 @@ const App = () => {
                 <Switch>
                     <Route exact path="/">
                         <Home />
+                    </Route>
+                    <Route path="/climbs">
+                        <Climbs />
                     </Route>
                     <Route path="/stats">
                         <Stats/>

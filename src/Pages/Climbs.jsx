@@ -2,7 +2,7 @@ import React from "react";
 import ClimbForm from "../Components/Home/ClimbForm";
 import ShowClimbs from "../Components/Home/ShowClimbs";
 
-const Home = () => {
+const Climbs = () => {
   return (
     <div className="">
       <ClimbForm />
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Climbs;
