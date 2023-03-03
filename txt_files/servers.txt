@@ -8,4 +8,4 @@ npx json-server --watch data/climbs.json --port 8000
 npx json-server --watch data/grades.json --port 8080
 
 //start gyms-server
-npx json-server --watch data/gyms.json --port 8040npx json-server --watch data/gyms.json --port 8040
+npx json-server --watch data/gyms.json --port 8040
