@@ -1,11 +1,8 @@
 import React from "react";
+import SubNavElement from "./SubNavElement";
 import { NavLink } from "react-router-dom";
 
 const SubNavBar = (props) => {
-
-    let reverse = () => {
-
-    }
 
     return (
       <nav className="bg-secondary shadow-xl py-5 pl-14 w-screen transform " >
@@ -15,21 +12,5 @@ const SubNavBar = (props) => {
       </nav>
     );
 };
-
-const SubNavElement = (props) => {
-
-    return (
-        <React.Fragment key={props.name}>
-            <NavLink 
-                exact
-                to={props.link}
-                className="hover:underline pr-10 text-white"
-                activeClassName="underline"
-                >
-                  {props.name.charAt(1).toUpperCase()}{props.name.slice(2)}
-            </NavLink>
-        </React.Fragment>
-    )
-}
 
 export default SubNavBar;

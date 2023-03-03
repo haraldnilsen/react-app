@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+.showNavBar {
+    @apply h-max;
+}
+
+.hideMenuNav {
+    @apply bg-white hidden h-max;
+}
+
 .form {
     @apply h-max shadow w-60 absolute border-r ;
 }
