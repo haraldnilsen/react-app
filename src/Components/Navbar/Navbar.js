@@ -11,6 +11,7 @@ export const Navbar = () => {
 
   return (
     <nav>
+      {/* Mobile UI navbar */}
       <section className="px-36 py-6 pb-14 md:hidden bg-primary shadow-xl mx-auto justify-center [&>*]:text-white">
         {!showNavBar && <div className="absolute left-10">
           <a href="/" className="flex">
@@ -75,6 +76,7 @@ export const Navbar = () => {
           </a>
         </div>
         
+        {/* Regular navbar */}
         <div className="flex [&>*]:px-8">
           <NavBarItem name="Climbs" link="/climbs" />
           <NavBarItem name="Stats" link="/stats"/>

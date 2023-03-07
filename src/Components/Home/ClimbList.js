@@ -51,7 +51,7 @@ const ClimbList = (props) => {
 
   return (
     <div className="ml-64 p-4" key={id}>
-      <h1 className="text-4xl text-center font-bold text-primary py-6">{title}</h1>
+      <h1 className="text-4xl text-center font-bold text-secondary py-6">{title}</h1>
       <div className="flex flex-row justify-between px-3">
         <form className="">
           <label for="sort">Sorted by: </label>

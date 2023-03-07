@@ -153,6 +153,30 @@
           "address": "Kvaløyvegen 329",
           "zip": "9016 Tromsø",
           "about": "Bouldering gym in Tromsø, opened in 2021."
+      },
+      {
+          "name": "Sunnmørshallen",
+          "city": "ålesund",
+          "picture": "https://images.squarespace-cdn.com/content/v1/620e4ced08713c2326b0bd1f/ef70f52b-5abf-4f38-8ecc-2d09e296d267/1-scaled.jpg?format=1000w",
+          "homepage": "https://www.klatreklubben.no/inneklatring/apningstider/",
+          "climbtype": "Lead-climbing",
+          "kilterboard": "true",
+          "moonboard": "false",
+          "address": "Sjømannsvegen 16",
+          "zip": "6008 Ålesund",
+          "about": "Tall lead-climbing wall in sports-arena near Ålesund city-centre."
+      },
+      {
+          "name": "Moldeveggen",
+          "city": "molde",
+          "picture": "https://vcdn.polarismedia.no/20d8cb4a-a285-4559-b212-c14b6ebe6f02?fit=crop&h=1200&q=80&tight=false&w=1900",
+          "homepage": "https://moldeveggen.no/",
+          "climbtype": "Lead-climbing and bouldering",
+          "kilterboard": "true",
+          "moonboard": "true",
+          "address": "Grandfjæra 22c",
+          "zip": "6415 Molde",
+          "about": "Biggest climbing gym in Norway. Opened up in 2023."
       }
   ]
 }
