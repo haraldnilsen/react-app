@@ -1,6 +1,4 @@
 import React from "react";
-import Unchecked from "../../img/icons8-close-48.png"
-import Checked from "../../img/icons8-done-48.png"
 
 export const SpotElement = (props) => {
     return (
@@ -15,15 +13,15 @@ export const SpotElement = (props) => {
                             <div className="flex h-6">
                                 <p>Kilterboard:</p>
                                 {props.gym.kilterboard == "true"
-                                    ? <img src={Checked}/>
-                                    : <img src={Unchecked}/>
+                                    ? <img src="/icons8-done-48.png"/>
+                                    : <img src="/icons8-close-48.png"/>
                                 }
                             </div>
                             <div className="flex h-6">
                                 <p>Moonboard:</p>
                                 {props.gym.moonboard == "true"
-                                    ? <img src={Checked}/>
-                                    : <img src={Unchecked}/>
+                                    ? <img src="/icons8-done-48.png"/>
+                                    : <img src="/icons8-close-48.png"/>
                                 }
                             </div>
                             <p className="">City: {props.gym.city.charAt(0).toUpperCase()}{props.gym.city.slice(1)}</p>

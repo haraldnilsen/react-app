@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import Moment from "moment";
 import { format } from "date-fns";
-import Arrow from "../../img/arrow-up-down-svgrepo-com.svg"
 
 const ClimbList = (props) => {
   const climbs = props.climbs;
@@ -63,7 +62,7 @@ const ClimbList = (props) => {
         </form>
         <div className="">
             {/* Reverses the climblist when button is clicked */}
-            <input className="h-6" type="image" src={Arrow} onClick={() => setReverse(!reverse)} />
+            <input className="h-6" type="image" src="/arrow-up-down-svgrepo-com.svg" onClick={() => setReverse(!reverse)} />
         </div>
       </div>
       {sortClimbs(climbs).map((climb) => (

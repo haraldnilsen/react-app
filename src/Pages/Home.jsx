@@ -1,14 +1,10 @@
 import React from "react";
-import * as logo from "../img/climbing-svgrepo-com-revert.svg"
-import ClimbList from "./Climbs"
-import ShowClimbs from "../Components/Home/ShowClimbs";
-
 
 const Home = () => {
   return (
     <div className="bg-green-900 h-full">
       <div className="mb-36"> 
-        <img className="mx-auto pt-20 h-72" src={logo.default}></img>
+        <img className="mx-auto pt-20 h-72" src="/climbing-svgrepo-com-revert.svg"></img>
         <h1 className="text-7xl mt-5 text-center text-white font-logo">
           Zendit
         </h1>

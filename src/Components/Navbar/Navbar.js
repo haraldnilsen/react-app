@@ -1,7 +1,4 @@
 import { NavLink } from "react-router-dom";
-import * as logo from "../../img/climbing-svgrepo-com-revert.svg";
-import * as profile from "../../img/profile-user-avatar-man-person-svgrepo-com.svg"
-import * as hamburgerSvg from "../../img/hamburger-menu-mobile-svgrepo-com.svg"
 import "../../Styles/App.css"
 import { useState } from "react";
 
@@ -15,7 +12,7 @@ export const Navbar = () => {
       <section className="px-36 py-6 pb-14 md:hidden bg-primary shadow-xl mx-auto justify-center [&>*]:text-white">
         {!showNavBar && <div className="absolute left-10">
           <a href="/" className="flex">
-            <img className="h-8" src={logo.default} ></img>
+            <img className="h-8" src="/climbing-svgrepo-com-revert.svg" ></img>
             <h3 className="pl-2 text-3xl text-white font-logo
             ">Zendit</h3>
           </a>
@@ -24,7 +21,7 @@ export const Navbar = () => {
         <div className="absolute right-10 flex">
           {!showNavBar && 
           <div onClick={() => setShowNavBar(true)}>
-            <img className="h-8" src={hamburgerSvg.default} ></img>
+            <img className="h-8" src="/hamburger-menu-mobile-svgrepo-com.svg" ></img>
           </div>}
           
         </div>
@@ -70,7 +67,7 @@ export const Navbar = () => {
       <section className="px-36 py-7 hidden md:flex bg-primary shadow-xl mx-auto justify-center [&>*]:text-white">
         <div className="absolute left-10">
           <a href="/" className="flex ">
-            <img className="h-8" src={logo.default} ></img>
+            <img className="h-8" src="/climbing-svgrepo-com-revert.svg" ></img>
             <h3 className="pl-2 text-3xl text-white font-logo
             ">Zendit</h3>
           </a>
@@ -85,7 +82,7 @@ export const Navbar = () => {
         </div>
         <div className="absolute right-10">
           <NavLink exact to="/profile">
-            <img className="h-8" src={profile.default} ></img>
+            <img className="h-8" src="/profile-user-avatar-man-person-svgrepo-com.svg" ></img>
           </NavLink>
         </div>
       </section>
