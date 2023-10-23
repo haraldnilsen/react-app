@@ -84,9 +84,9 @@ export const Navbar = () => {
           <NavBarItem name="Bibelen" link="/gear"/>
         </div>
         <div className="absolute right-10">
-          <a href="" className="flex ">
+          <NavLink exact to="/profile">
             <img className="h-8" src={profile.default} ></img>
-          </a>
+          </NavLink>
         </div>
       </section>
     </nav>
