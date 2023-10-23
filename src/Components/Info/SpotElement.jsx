@@ -4,8 +4,9 @@ import Checked from "../../img/icons8-done-48.png"
 
 export const SpotElement = (props) => {
     return (
-        <div className="h-64 my-5 flex ">
+        <div className="h-96 md:h-64 my-5 p-4 flex ">
             <div className="w-full px-4 py-2">
+            <img className="h-44 w-full py-3 object-cover flex md:hidden" src={props.gym.picture} />
                 <h2 className="p-4 bg-primary rounded text-white font-bold shadow text-center">{props.gym.name}</h2>
                 <div className="flex-col p-2 ">
                     <p className="inline-block w-full py-3 border-b-2 border-secondary ">{props.gym.about}</p>
@@ -36,7 +37,7 @@ export const SpotElement = (props) => {
                     </div>
                 </div>
             </div>
-            <img className="w-60 my-7 ml-auto object-cover" src={props.gym.picture} />
+            <img className="w-60 hidden md:flex my-7 ml-auto object-cover" src={props.gym.picture} />
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "../../Styles/App.css"
+import "./FormStyles.css"
 
 const ClimbForm = () => {
   const [climbType, setClimbType] = useState("sport");

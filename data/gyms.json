@@ -117,7 +117,7 @@
           "homepage": "https://bergenklatreklubb.no/klatrehall/bergenshallen/",
           "climbtype": "Lead-climbing",
           "kilterboard": "false",
-          "moonboard": "false",
+          "moonboard": "true",
           "about": "Climbing gym with walls as high as 15 meters."
       },
       {

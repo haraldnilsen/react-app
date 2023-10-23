@@ -12,8 +12,12 @@ Description2: Page where a user can see stats as:
     - 
 
 *****
-Idea3:Home Page
+Idea3:Climb page
 Description3: 
+
+User can start new session or just register a single climb
+Show calendar, where you can view climbs registered that day
+
 User should be able to submit climbs:
     - Sport/Boulder
     - Grade
@@ -47,3 +51,5 @@ Description: What is a beta? What does a flash mean? Etc.
 *****
 Idea6: Climbing material
 Description: List of all books/sites/ to read/watch
+
+*****

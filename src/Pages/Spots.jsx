@@ -79,8 +79,9 @@ const Spots = () => {
             <div className="text-center w-96 h-36 p-4 mx-auto mt-4">
                 <p className="">New to town and not sure where to climb? Just choose your city and we will show you all climbing-gyms near you!</p>
             </div>
-            <div className="border-t-4 border-primary h-screen ">
-                <div className="h-screen shadow w-60 absolute ">
+            <div className="border-t-4 border-primary h-screen">
+                {/* Form in desktop-view */}
+                <div className="md:h-screen p-5 md:p-0 shadow-lg md:w-60 md:absolute ">
                     <div className="mx-auto flex flex-col p-3">
                         <label className="spotform--label">City</label>
                         <select className="formelement--select" onChange={(e) => setCity(e.target.value)} >
@@ -95,10 +96,9 @@ const Spots = () => {
                             <input id="moonboard" type="checkbox" value={moonChecked} onChange={handleMoonChecked}/>
                             <label for="moonboard" className="spotform--label">Moonboard</label>
                         </div>
-                        
                     </div>
                 </div>
-                <div className="ml-60 h-screen">
+                <div className="md:ml-60 h-screen">
                     {filterCities(city, kilterChecked, moonChecked).map(gym => 
                         <React.Fragment key={gym.name}>
                             <SpotElement gym={gym} />

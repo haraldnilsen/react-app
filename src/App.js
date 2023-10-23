@@ -6,6 +6,7 @@ import Home from "./Pages/Home"
 import Stats from "./Pages/Stats";
 import Charts from "./Pages/Charts";
 import Gear from "./Pages/Gear";
+import Login from "./Pages/Login"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GradeConverter from "./Pages/GradeConverter";
 import News from "./Pages/News";
@@ -43,6 +44,9 @@ const App = () => {
                     </Route>
                     <Route path="/charts">
                         <Charts/>
+                    </Route>
+                    <Route path="/login">
+                        <Login/>
                     </Route>
                 </Switch>
             </div>
