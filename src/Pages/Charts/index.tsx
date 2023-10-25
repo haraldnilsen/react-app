@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SubNavBar from "../../Components/SubNavbar";
+import { SubNavbar } from "../../components";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import ChartComponent from "./ChartComponent/ChartComponent";
+import ChartComponent from "./ChartComponent";
+import { fetchGyms } from "../../api/getGyms";
 
 const Charts: React.FC = () => {
   const [climbs, setClimbs] = useState(null);
@@ -10,18 +11,31 @@ const Charts: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    Promise.all([fetch("http://localhost:8000/climbs")])
-      .then(([resClimbs]) => Promise.all([resClimbs.json()]))
-      .then(
-        ([dataClimbs]) => {
-          setClimbs(dataClimbs);
-          setIsLoaded(true);
-        },
-        (error) => {
-          setError(error);
-          setIsLoaded(true);
-        }
-      );
+    const handleFetchClimbs = async () => {
+      const response = await fetchGyms();
+      if (response) {
+        setClimbs(response);
+        setIsLoaded(true);
+      } else {
+        setError("Error");
+        setIsLoaded(true);
+      }
+    };
+
+    handleFetchClimbs();
+
+    // Promise.all([fetch("http://localhost:8000/climbs")])
+    //   .then(([resClimbs]) => Promise.all([resClimbs.json()]))
+    //   .then(
+    //     ([dataClimbs]) => {
+    //       setClimbs(dataClimbs);
+    //       setIsLoaded(true);
+    //     },
+    //     (error) => {
+    //       setError(error);
+    //       setIsLoaded(true);
+    //     }
+    //   );
   }, []);
 
   if (error) {
@@ -32,7 +46,7 @@ const Charts: React.FC = () => {
   } else {
     return (
       <div className="">
-        <SubNavBar data={["/stats", "/charts"]} />
+        <SubNavbar data={["/stats", "/charts"]} />
         <ChartComponent
           name="Boulder"
           chartTitle="All Boulders"

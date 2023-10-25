@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { NavbarItemProps, SubNavbarItemProps } from "./types";
+import { SubNavbarItemProps, SubNavbarProps } from "./types";
 
-const SubNavBar: React.FC<NavbarItemProps> = (props) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ data }) => {
   return (
     <nav className="bg-secondary shadow-xl py-5 pl-14 w-screen transform ">
       <div className="flex" key={3}>
-        {props.data.map((elem) => (
+        {data.map((elem) => (
           <SubNavElement link={elem} name={elem} />
         ))}
       </div>
@@ -30,4 +30,4 @@ const SubNavElement: React.FC<SubNavbarItemProps> = ({ name, link }) => {
   );
 };
 
-export default SubNavBar;
+export default SubNavbar;

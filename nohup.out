@@ -1,0 +1,47 @@
+
+
+
+  \{^_^}/ hi!
+  \{^_^}/ hi!
+  \{^_^}/ hi!
+
+
+
+  Loading data/grades.json
+  Loading data/gyms.json
+  Loading data/climbs.json
+  Done
+  Done
+  Done
+
+  Resources
+  http://localhost:8040/gyms
+
+  Home
+  http://localhost:8040
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+
+  Resources
+  http://localhost:8000/climbs
+
+  Home
+  http://localhost:8000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+
+  Resources
+  http://localhost:8080/frenchGradeValue
+  http://localhost:8080/nordicGradeValue
+  http://localhost:8080/vGradeValue
+
+  Home
+  http://localhost:8080
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
