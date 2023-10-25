@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "./FormStyles.css"
+import "./FormStyles.css";
 
-const ClimbForm = () => {
+const ClimbForm: React.FC = () => {
   const [climbType, setClimbType] = useState("sport");
   const [grade, setGrade] = useState("6A");
   const [date, setDate] = useState(new Date());
@@ -32,7 +32,7 @@ const ClimbForm = () => {
     "8C+",
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const newclimb = { climbType, grade, date };
     console.log(newclimb);
@@ -54,7 +54,8 @@ const ClimbForm = () => {
       <form className="p-2 m-3" onSubmit={handleSubmit}>
         <div className="formelement">
           <label className="font-bold">Type of climbing*</label>
-          <select className="formelement formelement--select"
+          <select
+            className="formelement formelement--select"
             value={climbType}
             onChange={(e) => setClimbType(e.target.value)}
           >
@@ -64,7 +65,8 @@ const ClimbForm = () => {
         </div>
         <div className="formelement">
           <label className="font-bold">Indoor/Outdoor*</label>
-          <select className="formelement formelement--select"
+          <select
+            className="formelement formelement--select"
             value={climbType}
             onChange={(e) => setClimbType(e.target.value)}
           >
@@ -81,7 +83,9 @@ const ClimbForm = () => {
             onChange={(e) => setGrade(e.target.value)}
           >
             {gradesList.map((x) => (
-              <option value={x} key={x}>{x}</option>
+              <option value={x} key={x}>
+                {x}
+              </option>
             ))}
           </select>
         </div>
@@ -90,16 +94,16 @@ const ClimbForm = () => {
           <input
             className="formelement formelement--select"
             type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            value={date.toString()}
+            onChange={(e) => setDate(new Date(e.target.value))}
           />
         </div>
-        <button className="formelement--submit bg-green-500" type="submit">Submit</button>
+        <button className="formelement--submit bg-green-500" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
 };
-
-
 
 export default ClimbForm;
