@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import "../Styles/Stats.css"
-import convertGrade from "./GradeConverter";
-import SubNavBar from "../Components/Navbar/SubNavBar";
+import convertGrade from "../GradeConverter";
+import SubNavBar from "../../Components/SubNavbar";
 
-export const Stats = () => {
+const Stats:React.FC = () => {
   const [climbs, setClimbs] = useState(null);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);

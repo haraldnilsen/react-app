@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
-import convertGrade from "../util/convertGrade";
+import convertGrade from "../../util/convertGrade";
 
-export const GradeConverter = () => {
+const GradeConverter:React.FC = () => {
 
     const [climbType, setClimbType] = useState("sport");
     

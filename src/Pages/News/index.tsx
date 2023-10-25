@@ -1,9 +1,10 @@
-import InfoElement from "../Components/Info/InfoElement";
-import SubNavBar from "../Components/Navbar/SubNavBar";
+import React from "react";
+import InfoElement from "../Gear/InfoElement";
+import SubNavBar from "../../Components/SubNavbar";
 import "../Styles/Info.css"
 
 
-const News = () => {
+const News:React.FC = () => {
     return (
         <div>
             <SubNavBar data={["/gear", "/news", "/spots"]}/>

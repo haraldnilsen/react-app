@@ -4,12 +4,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import Climbs from "./Pages/Climbs";
 import Home from "./Pages/Home"
 import Stats from "./Pages/Stats";
-import Charts from "./Pages/Charts";
+import Charts from "./Pages/Charts/Charts";
 import Gear from "./Pages/Gear";
 import Login from "./Pages/Login"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GradeConverter from "./Pages/GradeConverter";
-import News from "./Pages/News";
+import News from "./Pages/News/News";
 import Spots from "./Pages/Spots";
 import Profile from "./Pages/Profile";
 

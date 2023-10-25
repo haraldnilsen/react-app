@@ -1,8 +1,10 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../Styles/App.css"
 import { useState } from "react";
+import { NavbarItemProps } from "./types";
 
-export const Navbar = () => {
+const Navbar:React.FC = () => {
 
   const [showNavBar, setShowNavBar] = useState(false);
 
@@ -90,15 +92,18 @@ export const Navbar = () => {
   );
 };
 
-const NavBarItem = (props) => {
+const NavBarItem:React.FC<NavbarItemProps> = ({
+  link,
+  name
+}) => {
   return (
     <NavLink 
         exact
-        to={props.link}
+        to={link}
         className="hover:underline"
         activeClassName="underline"
         >
-          {props.name}
+          {name}
     </NavLink>
   )
 }

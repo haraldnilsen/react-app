@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const Home:React.FC = () => {
   return (
     <div className="bg-green-900 h-full">
       <div className="mb-36"> 

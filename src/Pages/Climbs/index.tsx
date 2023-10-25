@@ -1,8 +1,8 @@
 import React from "react";
-import ClimbForm from "../Components/Home/ClimbForm";
-import ShowClimbs from "../Components/Home/ShowClimbs";
+import ClimbForm from "./ClimbForm";
+import ShowClimbs from "./ClimbList/ShowClimbs";
 
-const Climbs = () => {
+const Climbs:React.FC = () => {
   return (
     <div className="">
       <ClimbForm />

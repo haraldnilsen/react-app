@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import SubNavBar from "../Components/Navbar/SubNavBar";
+import SubNavBar from "../../Components/SubNavbar";
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
-import ChartComponent from "../Components/Charts/ChartComponent";
+import ChartComponent from "./ChartComponent/ChartComponent";
 
-export const Charts = () => {
+const Charts: React.FC = () => {
     const [climbs, setClimbs] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);

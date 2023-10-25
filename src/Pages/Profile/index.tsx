@@ -1,7 +1,7 @@
 // React imports
 import React, { useState, useEffect } from "react";
 
-export default function Profile ()  {
+const Profile:React.FC = () => {
 
     return (
         <div>
@@ -19,3 +19,4 @@ export default function Profile ()  {
     )
 }
 
+export default Profile;

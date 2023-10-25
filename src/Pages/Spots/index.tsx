@@ -1,13 +1,12 @@
 import React, { useState, useEffect} from "react";
 
-import SubNavBar from "../Components/Navbar/SubNavBar";
-import InfoElement from "../Components/Info/InfoElement";
-import SpotElement from "../Components/Info/SpotElement";
+import SubNavBar from "../../Components/SubNavbar";
+import SpotElement from "./SpotElement/SpotElement";
 import { parseZone } from "moment";
 import "../Styles/App.css"
 
 
-const Spots = () => {
+const Spots:React.FC = () => {
     
     //all gyms in norway
     const [gyms, setGyms] = useState(null);
