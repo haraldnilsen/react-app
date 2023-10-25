@@ -1,6 +1,6 @@
 import Highcharts, { color } from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const ChartComponent = (props) => {
     const climbs = props.climbs;

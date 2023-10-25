@@ -1,0 +1,77 @@
+
+
+  \{^_^}/ hi!
+
+  Loading data/gyms.json
+  \{^_^}/ hi!
+
+  Loading data/grades.json
+
+  \{^_^}/ hi!
+
+  Loading data/climbs.json
+  Done
+  Done
+  Done
+
+  Resources
+  http://localhost:8040/gyms
+
+  Home
+  http://localhost:8040
+
+
+  Resources
+  http://localhost:8080/frenchGradeValue
+  Type s + enter at any time to create a snapshot of the database
+  http://localhost:8080/nordicGradeValue
+  http://localhost:8080/vGradeValue
+
+  Home
+  http://localhost:8080
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+  Watching...
+
+
+  Resources
+  http://localhost:8000/climbs
+
+  Home
+  http://localhost:8000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+[0mGET /frenchGradeValue [36m304[0m 8.349 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 10.012 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 11.460 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 3.320 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 2.323 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 4.857 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.946 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.705 ms - -[0m
+[0mGET /climbs [36m304[0m 7.643 ms - -[0m
+[0mGET /climbs [36m304[0m 3.470 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 3.171 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 4.475 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 5.007 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.209 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 3.324 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 3.738 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 3.962 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 1.640 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 2.397 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.719 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 3.141 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 2.790 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.597 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 1.597 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 2.433 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.490 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 2.437 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 1.563 ms - -[0m
+[0mGET /climbs [36m304[0m 3.590 ms - -[0m
+[0mGET /climbs [36m304[0m 3.715 ms - -[0m
