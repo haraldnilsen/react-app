@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ClimbForm from "./ClimbForm";
-import ClimbList from "./ClimbList/ClimbList";
+import ClimbList from "./ClimbList";
+import { ClimbElement } from "../../types/response";
 
 const Climbs: React.FC = () => {
-  const [climbs, setClimbs] = useState(null);
+  const [climbs, setClimbs] = useState<ClimbElement[]>(null);
 
   useEffect(() => {
     // npx json-server --watch data/climbs.json --port 8000
