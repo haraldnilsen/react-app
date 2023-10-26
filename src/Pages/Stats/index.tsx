@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
-import Chart from "chart.js/auto";
-import "../Styles/Stats.css";
+import "../../styles/Stats.css";
 import convertGrade from "../GradeConverter";
 import SubNavBar from "../../components/SubNavbar";
 import StatElement from "./StatElement";

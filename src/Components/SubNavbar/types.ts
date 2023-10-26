@@ -1,4 +1,4 @@
-export interface NavbarItemProps {
+export interface SubNavbarProps {
   data: string[];
 }
 

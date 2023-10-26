@@ -28,9 +28,13 @@ const ChartComponent: React.FC<ChartComponentProps> = ({
       }
     }
 
+    // //sorts the rsesult so that the order is shown with grade ascending
+    // let resultatet = new Map(
+    //   [...resultat].sort((a, b) => String(a[0].localeCompare(b[0])))
+    // );
     //sorts the rsesult so that the order is shown with grade ascending
     let resultatet = new Map(
-      [...resultat].sort((a, b) => String(a[0].localeCompare(b[0])))
+      [...resultat].sort((a, b) => a[0].localeCompare(b[0]))
     );
 
     return resultatet;

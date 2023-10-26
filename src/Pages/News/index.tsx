@@ -1,7 +1,7 @@
 import React from "react";
 import InfoElement from "../Gear/InfoElement";
 import SubNavBar from "../../components/SubNavbar";
-import "../Styles/Info.css";
+import "../../styles/Info.css";
 
 const News: React.FC = () => {
   return (

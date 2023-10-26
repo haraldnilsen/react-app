@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import SubNavbar from "../../components/SubNavbar";
 import SpotElement from "./SpotElement";
-import { parseZone } from "moment";
-import "../Styles/App.css";
+import "../../styles/App.css";
 import { GymElement } from "../../types/response";
 import { fetchGyms } from "../../api/getGyms";
 

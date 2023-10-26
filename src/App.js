@@ -1,17 +1,30 @@
 import React from "react";
-import "./Styles/App.css";
+import "./styles/App.css";
 import Navbar from "./components/Navbar";
-import Climbs from "./pages/Climbs";
-import Home from "./pages/Home";
-import Stats from "./pages/Stats";
-import Charts from "./pages/Charts/Charts";
-import Gear from "./pages/Gear";
-import Login from "./pages/Login";
+
+import {
+  Climbs,
+  Home,
+  Stats,
+  Charts,
+  Gear,
+  Login,
+  News,
+  Spots,
+  Profile,
+  GradeConverter,
+} from "./pages";
+
+// import Climbs from "./pages/Climbs";
+// import Home from "./pages/Home";
+// import Stats from "./pages/Stats";
+// import Charts from "./pages/Charts/Charts";
+// import Gear from "./pages/Gear";
+// import Login from "./pages/Login";
+// import News from "./pages/News";
+// import Spots from "./pages/Spots";
+// import Profile from "./pages/Profile";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import GradeConverter from "./util/GradeConverter";
-import News from "./pages/News";
-import Spots from "./pages/Spots";
-import Profile from "./pages/Profile";
 
 const App = () => {
   return (

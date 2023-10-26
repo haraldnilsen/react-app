@@ -4,15 +4,17 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import ChartComponent from "./ChartComponent";
 import { fetchGyms } from "../../api/getGyms";
+import { ClimbElement } from "../../types/response";
+import { fetchClimbs } from "../../api/getClimbs";
 
 const Charts: React.FC = () => {
-  const [climbs, setClimbs] = useState(null);
+  const [climbs, setClimbs] = useState<ClimbElement[]>(null);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleFetchClimbs = async () => {
-      const response = await fetchGyms();
+      const response = await fetchClimbs();
       if (response) {
         setClimbs(response);
         setIsLoaded(true);

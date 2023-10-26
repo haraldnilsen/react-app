@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-
-interface GradeType {
-  value: number;
-  grade: string;
-}
+import { GradeElement } from "../types/response";
 
 function ConvertGrade(
   climbtype: string,
@@ -13,9 +9,9 @@ function ConvertGrade(
   const [climbType, setClimbType] = useState("sport");
 
   const [gradeType, setGradeType] = useState("French");
-  const [frenchGrades, setFrenchGrades] = useState<GradeType[]>(null);
-  const [nordicGrades, setNordicGrades] = useState<GradeType[]>(null);
-  const [vGrades, setVGrades] = useState<GradeType[]>(null);
+  const [frenchGrades, setFrenchGrades] = useState<GradeElement[]>(null);
+  const [nordicGrades, setNordicGrades] = useState<GradeElement[]>(null);
+  const [vGrades, setVGrades] = useState<GradeElement[]>(null);
 
   const [gradeValue, setGradeValue] = useState(4);
 

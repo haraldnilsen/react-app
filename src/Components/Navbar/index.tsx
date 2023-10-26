@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../../Styles/App.css";
+import "../../styles/App.css";
 
 interface NavbarItemProps {
   name: string;
