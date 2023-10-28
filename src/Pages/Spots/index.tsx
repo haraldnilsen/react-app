@@ -35,20 +35,6 @@ const Spots: React.FC = () => {
     };
 
     handleFetchGyms();
-
-    // Promise.all([fetch("http://localhost:8040/gyms")])
-    //   .then(([resGyms]) => Promise.all([resGyms.json()]))
-    //   .then(
-    //     ([dataGyms]) => {
-    //       setGyms(dataGyms);
-    //       setCities([...new Set(dataGyms.map((x) => x.city))]);
-    //       setIsLoaded(true);
-    //     },
-    //     (error) => {
-    //       setError(error);
-    //       setIsLoaded(true);
-    //     }
-    //   );
   }, []);
 
   const handleKilterChecked = () => {

@@ -1,43 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GradeElement } from "../types/response";
+import { fetchGrades } from "../api/getGrades";
 
 function ConvertGrade(
   climbtype: string,
   gradetype: string,
   gradevalue: number
 ) {
-  const [climbType, setClimbType] = useState("sport");
-
-  const [gradeType, setGradeType] = useState("French");
   const [frenchGrades, setFrenchGrades] = useState<GradeElement[]>(null);
   const [nordicGrades, setNordicGrades] = useState<GradeElement[]>(null);
   const [vGrades, setVGrades] = useState<GradeElement[]>(null);
 
-  const [gradeValue, setGradeValue] = useState(4);
+  useEffect(() => {
+    const handleFetchGyms = async () => {
+      try {
+        const frenchResponse = await fetchGrades("frenchGradeValue");
+        const nordicResponse = await fetchGrades("nordicGradeValue");
+        const vGradeResponse = await fetchGrades("vGradeValue");
 
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  Promise.all([
-    fetch("http://localhost:8080/frenchGradeValue"),
-    fetch("http://localhost:8080/nordicGradeValue"),
-    fetch("http://localhost:8080/vGradeValue"),
-  ])
-    .then(([resFrench, resNordic, resV]) =>
-      Promise.all([resFrench.json(), resNordic.json(), resV.json()])
-    )
-    .then(
-      ([dataFrenchGrades, dataNordicGrades, dataVGrades]) => {
-        setFrenchGrades(dataFrenchGrades);
-        setNordicGrades(dataNordicGrades);
-        setVGrades(dataVGrades);
-        setIsLoaded(true);
-      },
-      (error) => {
-        setError(error);
-        setIsLoaded(true);
+        setFrenchGrades(frenchResponse);
+        setNordicGrades(nordicResponse);
+        setVGrades(vGradeResponse);
+      } catch (error) {
+        console.log(error);
       }
-    );
+    };
+
+    handleFetchGyms();
+  }, []);
+
+  // Promise.all([
+  //   fetch("http://localhost:8080/frenchGradeValue"),
+  //   fetch("http://localhost:8080/nordicGradeValue"),
+  //   fetch("http://localhost:8080/vGradeValue"),
+  // ])
+  //   .then(([resFrench, resNordic, resV]) =>
+  //     Promise.all([resFrench.json(), resNordic.json(), resV.json()])
+  //   )
+  //   .then(
+  //     ([dataFrenchGrades, dataNordicGrades, dataVGrades]) => {
+  //       setFrenchGrades(dataFrenchGrades);
+  //       setNordicGrades(dataNordicGrades);
+  //       setVGrades(dataVGrades);
+  //     },
+  //     (error) => {
+  //       return error;
+  //     }
+  //   );
 
   let result = [];
 

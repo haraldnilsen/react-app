@@ -17,8 +17,6 @@ const StatElement: React.FC<StatElementProps> = ({
   let test;
   function propData() {
     if (data === "grade") {
-      test = convertGrade("sport", "french", func(type).grade);
-      // return test;
       return func(type).grade;
     } else {
       return func(type);
