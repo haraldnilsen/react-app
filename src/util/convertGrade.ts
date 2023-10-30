@@ -29,25 +29,6 @@ function ConvertGrade(
     handleFetchGyms();
   }, []);
 
-  // Promise.all([
-  //   fetch("http://localhost:8080/frenchGradeValue"),
-  //   fetch("http://localhost:8080/nordicGradeValue"),
-  //   fetch("http://localhost:8080/vGradeValue"),
-  // ])
-  //   .then(([resFrench, resNordic, resV]) =>
-  //     Promise.all([resFrench.json(), resNordic.json(), resV.json()])
-  //   )
-  //   .then(
-  //     ([dataFrenchGrades, dataNordicGrades, dataVGrades]) => {
-  //       setFrenchGrades(dataFrenchGrades);
-  //       setNordicGrades(dataNordicGrades);
-  //       setVGrades(dataVGrades);
-  //     },
-  //     (error) => {
-  //       return error;
-  //     }
-  //   );
-
   let result = [];
 
   if (climbtype == "sport") {
