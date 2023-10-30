@@ -629,3 +629,50 @@
 [0mGET /frenchGradeValue [36m304[0m 2.850 ms - -[0m
 [0mGET /climbs [36m304[0m 3.047 ms - -[0m
 [0mGET /climbs [36m304[0m 2.806 ms - -[0m
+
+
+
+  \{^_^}/ hi!
+  \{^_^}/ hi!
+  \{^_^}/ hi!
+
+
+
+  Loading data/grades.json
+  Loading data/climbs.json
+  Loading data/gyms.json
+  Done
+  Done
+  Done
+
+  Resources
+  http://localhost:8080/frenchGradeValue
+  http://localhost:8080/nordicGradeValue
+  http://localhost:8080/vGradeValue
+
+
+
+  Home
+  http://localhost:8080
+  Resources
+
+  Resources
+  http://localhost:8000/climbs
+
+  http://localhost:8040/gyms
+  Home
+
+  http://localhost:8000
+
+  Home
+  Type s + enter at any time to create a snapshot of the database
+  http://localhost:8040
+
+  Type s + enter at any time to create a snapshot of the database
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+  Watching...
+
+
+  Watching...
+

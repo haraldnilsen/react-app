@@ -5,6 +5,7 @@ import SpotElement from "./SpotElement";
 import "../../styles/App.css";
 import { GymElement } from "../../types/response";
 import { fetchGyms } from "../../api/getGyms";
+import supabase from "../../clients/supabaseClient";
 
 const Spots: React.FC = () => {
   //all gyms in norway
@@ -23,10 +24,10 @@ const Spots: React.FC = () => {
 
   useEffect(() => {
     const handleFetchGyms = async () => {
-      const response = await fetchGyms();
-      if (response) {
-        setGyms(response);
-        setCities([...new Set(response.map((x) => x.city))]);
+      const { data } = await supabase.from("gyms").select();
+      if (data) {
+        setGyms(data);
+        setCities([...new Set(data.map((x) => x.city))]);
         setIsLoaded(true);
       } else {
         setError("Error");
