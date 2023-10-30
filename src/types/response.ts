@@ -17,6 +17,7 @@ export interface ClimbElement {
 }
 
 export interface GradeElement {
-  value: number;
+  grade_type: string;
   grade: string;
+  value: number;
 }

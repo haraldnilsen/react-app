@@ -24,7 +24,7 @@ const Spots: React.FC = () => {
 
   useEffect(() => {
     const handleFetchGyms = async () => {
-      const { data } = await supabase.from("gyms").select();
+      const data = await fetchGyms();
       if (data) {
         setGyms(data);
         setCities([...new Set(data.map((x) => x.city))]);

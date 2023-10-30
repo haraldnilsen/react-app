@@ -676,3 +676,15 @@
 
   Watching...
 
+[0mGET /climbs [36m304[0m 13.674 ms - -[0m
+[0mGET /climbs [36m304[0m 3.848 ms - -[0m
+[0mGET /climbs [36m304[0m 4.459 ms - -[0m
+[0mGET /climbs [36m304[0m 3.651 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 16.404 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 4.277 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 3.546 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 6.871 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.265 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 3.099 ms - -[0m
+[0mGET /vGradeValue [36m304[0m 2.797 ms - -[0m
+[0mGET /nordicGradeValue [36m304[0m 5.605 ms - -[0m

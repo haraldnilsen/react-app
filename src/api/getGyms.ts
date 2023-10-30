@@ -1,15 +1,11 @@
 import { GymElement } from "../types/response";
+import supabase from "../clients/supabaseClient";
 
 export const fetchGyms = async (): Promise<GymElement[]> => {
-  let query = `http://localhost:8040/gyms`;
-
-  const response = await fetch(query)
-    .then((response) => response.json())
-    .then((data) => {
-      return data;
-    })
-    .catch((error) => {
-      console.log("Error:", error);
-    });
-  return response;
+  try {
+    const { data } = await supabase.from("gyms").select();
+    return data;
+  } catch (error) {
+    return error;
+  }
 };

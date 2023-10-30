@@ -14,9 +14,9 @@ function ConvertGrade(
   useEffect(() => {
     const handleFetchGyms = async () => {
       try {
-        const frenchResponse = await fetchGrades("frenchGradeValue");
-        const nordicResponse = await fetchGrades("nordicGradeValue");
-        const vGradeResponse = await fetchGrades("vGradeValue");
+        const frenchResponse = await fetchGrades("french");
+        const nordicResponse = await fetchGrades("nordic");
+        const vGradeResponse = await fetchGrades("vgrade");
 
         setFrenchGrades(frenchResponse);
         setNordicGrades(nordicResponse);

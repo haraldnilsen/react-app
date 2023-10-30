@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GradeElement } from "../../types/response";
+import { fetchGrades } from "../../api/getGrades";
 
 const GradeConverter: React.FC = () => {
   const [climbType, setClimbType] = useState("sport");
@@ -14,26 +15,23 @@ const GradeConverter: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    Promise.all([
-      fetch("http://localhost:8080/frenchGradeValue"),
-      fetch("http://localhost:8080/nordicGradeValue"),
-      fetch("http://localhost:8080/vGradeValue"),
-    ])
-      .then(([resFrench, resNordic, resV]) =>
-        Promise.all([resFrench.json(), resNordic.json(), resV.json()])
-      )
-      .then(
-        ([dataFrenchGrades, dataNordicGrades, dataVGrades]) => {
-          setFrenchGrades(dataFrenchGrades);
-          setNordicGrades(dataNordicGrades);
-          setVGrades(dataVGrades);
-          setIsLoaded(true);
-        },
-        (error) => {
-          setError(error);
-          setIsLoaded(true);
-        }
-      );
+    const handleFetchGyms = async () => {
+      try {
+        const frenchResponse = await fetchGrades("french");
+        const nordicResponse = await fetchGrades("nordic");
+        const vGradeResponse = await fetchGrades("vgrade");
+
+        setFrenchGrades(frenchResponse);
+        setNordicGrades(nordicResponse);
+        setVGrades(vGradeResponse);
+        setIsLoaded(true);
+      } catch (error) {
+        setError(error);
+        setIsLoaded(true);
+      }
+    };
+
+    handleFetchGyms();
   }, []);
 
   const selectGrades = () => {
