@@ -17,13 +17,12 @@ const GradeConverter: React.FC = () => {
   useEffect(() => {
     const handleFetchGyms = async () => {
       try {
-        const frenchResponse = await fetchGrades("french");
-        const nordicResponse = await fetchGrades("nordic");
-        const vGradeResponse = await fetchGrades("vgrade");
+        const response = await fetchGrades();
 
-        setFrenchGrades(frenchResponse);
-        setNordicGrades(nordicResponse);
-        setVGrades(vGradeResponse);
+        setFrenchGrades(response.filter((c) => c.grade_type == "french"));
+        setNordicGrades(response.filter((c) => c.grade_type == "nordic"));
+        setVGrades(response.filter((c) => c.grade_type == "vgrade"));
+
         setIsLoaded(true);
       } catch (error) {
         setError(error);

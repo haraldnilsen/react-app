@@ -1,7 +1,5 @@
 # Zendit
 
-![Zendit Demo](/public/demo.gif)
-
 ## Table of Contents
 
 - [About](#about)
@@ -15,6 +13,8 @@
 ## About
 
 Zendit is an application made for all climbers. The goal of the project is to give climbers a platform for sharing and analyzing training data and getting easy access to all other climbing resources.
+
+![Zendit Demo](/public/demo.gif)
 
 ## Prerequisites
 

@@ -9,6 +9,7 @@ import {
   Charts,
   Gear,
   Login,
+  Signup,
   News,
   Spots,
   Profile,
@@ -61,6 +62,9 @@ const App = () => {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
           </Route>
           <Route path="/profile">
             <Profile />

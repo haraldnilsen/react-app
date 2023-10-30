@@ -4,6 +4,7 @@ export { default as Gear } from "./Gear";
 export { default as GradeConverter } from "./GradeConverter";
 export { default as Home } from "./Home";
 export { default as Login } from "./Login";
+export { default as Signup } from "./SignUp";
 export { default as News } from "./News";
 export { default as Profile } from "./Profile";
 export { default as Spots } from "./Spots";
