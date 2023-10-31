@@ -1,7 +1,8 @@
 // React imports
 import React, { FormEvent, useState } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import supabase from "../../../clients/supabaseClient";
+import ReactModal from "react-modal";
 
 const SignUpBox = () => {
   const [firstName, setFirstName] = useState("");
@@ -10,7 +11,7 @@ const SignUpBox = () => {
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
   const [wrongRepeated, setWrongRepeated] = useState(false);
-  const history = useHistory();
+  const [emailSent, setEmailSent] = useState(false);
 
   const createUser = async (event: FormEvent) => {
     event.preventDefault();
@@ -24,7 +25,7 @@ const SignUpBox = () => {
               firstName: firstName,
               lastName: lastName,
             },
-            emailRedirectTo: "http://localhost:3000/confirmEmail",
+            emailRedirectTo: "http://localhost:3000/",
           },
         });
       } catch (err) {
@@ -38,6 +39,21 @@ const SignUpBox = () => {
   return (
     <>
       <div>
+        <ReactModal
+          isOpen={emailSent}
+          className="fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50"
+          overlayClassName="Overlay"
+          contentLabel="Email Confirmation Modal"
+        >
+          <div className="relative bg-white rounded-lg text-center p-8 w-full max-w-md">
+            <h1 className="text-2xl font-semibold text-gray-700 mb-4">
+              Thank You for Signing Up!
+            </h1>
+            <p className="text-md text-gray-500 mb-6">
+              A confirmation email has been sent to your account.
+            </p>
+          </div>
+        </ReactModal>
         <div className="bg-white h-auto w-96 hover:shadow-2xl rounded-xl mx-auto">
           <form className="flex flex-col p-5">
             <h1 className="text-2xl text-center py-4">Register new user</h1>
