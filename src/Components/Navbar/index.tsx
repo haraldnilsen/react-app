@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import "../../styles/App.css";
+import supabase from "../../clients/supabaseClient";
 
 interface NavbarItemProps {
   name: string;
@@ -10,6 +11,24 @@ interface NavbarItemProps {
 
 const Navbar: React.FC = () => {
   const [showNavBar, setShowNavBar] = useState(false);
+  const [user, setUser] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data } = await supabase.auth.getSession();
+      try {
+        if (data.session != null) {
+          console.log(data.session);
+          setUser(data.session);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchUser();
+  }, []);
 
   return (
     <nav>
@@ -103,12 +122,23 @@ const Navbar: React.FC = () => {
           <NavBarItem name="Bibelen" link="/gear" />
         </div>
         <div className="absolute right-10">
-          <NavLink exact to="/profile">
-            <img
-              className="h-8"
-              src="/profile-user-avatar-man-person-svgrepo-com.svg"
-            ></img>
-          </NavLink>
+          {user != null ? (
+            <NavLink exact to="/profile">
+              <img
+                className="h-8"
+                src="/profile-user-avatar-man-person-svgrepo-com.svg"
+              ></img>
+            </NavLink>
+          ) : (
+            <div className="flex">
+              <NavLink exact to="/login">
+                Login
+              </NavLink>
+              <NavLink exact to="/signup">
+                Signup
+              </NavLink>
+            </div>
+          )}
         </div>
       </section>
     </nav>

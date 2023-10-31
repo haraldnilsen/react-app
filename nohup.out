@@ -696,3 +696,92 @@
 [0mGET /frenchGradeValue [36m304[0m 3.993 ms - -[0m
 [0mGET /climbs [36m304[0m 4.330 ms - -[0m
 [0mGET /climbs [36m304[0m 3.691 ms - -[0m
+
+  \{^_^}/ hi!
+
+  Loading data/climbs.json
+
+  \{^_^}/ hi!
+
+  Loading data/gyms.json
+  Done
+
+  Resources
+  http://localhost:8000/climbs
+
+  Home
+  http://localhost:8000
+
+  Type s + enter at any time to create a snapshot of the database
+  Done
+  Watching...
+
+
+  Resources
+  http://localhost:8040/gyms
+
+  Home
+  http://localhost:8040
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+
+  \{^_^}/ hi!
+
+  Loading data/grades.json
+  Done
+
+  Resources
+  http://localhost:8080/frenchGradeValue
+  http://localhost:8080/nordicGradeValue
+  http://localhost:8080/vGradeValue
+
+  Home
+  http://localhost:8080
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+[0mGET /climbs [36m304[0m 8.155 ms - -[0m
+[0mGET /climbs [36m304[0m 3.725 ms - -[0m
+[0mGET /climbs [36m304[0m 3.850 ms - -[0m
+[0mGET /climbs [36m304[0m 3.407 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 7.752 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 3.436 ms - -[0m
+[0mGET /climbs [36m304[0m 3.256 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 2.255 ms - -[0m
+[0mGET /climbs [36m304[0m 2.943 ms - -[0m
+[0mGET /frenchGradeValue [36m304[0m 3.230 ms - -[0m
+[0mGET /climbs [36m304[0m 4.869 ms - -[0m
+[0mGET /climbs [36m304[0m 4.532 ms - -[0m
+[0mGET /climbs [36m304[0m 2.480 ms - -[0m
+[0mGET /climbs [36m304[0m 4.226 ms - -[0m
+[0mGET /climbs [36m304[0m 3.705 ms - -[0m
+[0mGET /climbs [36m304[0m 3.133 ms - -[0m
+[0mGET /climbs [36m304[0m 3.600 ms - -[0m
+[0mGET /climbs [36m304[0m 3.284 ms - -[0m
+[0mGET /climbs [36m304[0m 3.376 ms - -[0m
+[0mGET /climbs [36m304[0m 2.377 ms - -[0m
+[0mGET /climbs [36m304[0m 3.861 ms - -[0m
+[0mGET /climbs [36m304[0m 3.204 ms - -[0m
+[0mGET /climbs [36m304[0m 5.144 ms - -[0m
+[0mGET /climbs [36m304[0m 7.376 ms - -[0m
+[0mGET /climbs [36m304[0m 2.867 ms - -[0m
+[0mGET /climbs [36m304[0m 2.452 ms - -[0m
+[0mGET /climbs [36m304[0m 4.182 ms - -[0m
+[0mGET /climbs [36m304[0m 3.076 ms - -[0m
+[0mGET /climbs [36m304[0m 4.740 ms - -[0m
+[0mGET /climbs [36m304[0m 1.885 ms - -[0m
+[0mGET /climbs [36m304[0m 3.596 ms - -[0m
+[0mGET /climbs [36m304[0m 2.786 ms - -[0m
+[0mGET /climbs [36m304[0m 3.638 ms - -[0m
+[0mGET /climbs [36m304[0m 3.653 ms - -[0m
+[0mGET /climbs [36m304[0m 3.030 ms - -[0m
+[0mGET /climbs [36m304[0m 3.759 ms - -[0m
+[0mGET /climbs [36m304[0m 2.871 ms - -[0m
+[0mGET /climbs [36m304[0m 4.747 ms - -[0m
+[0mGET /climbs [36m304[0m 3.443 ms - -[0m
+[0mGET /climbs [36m304[0m 3.431 ms - -[0m
+[0mGET /climbs [36m304[0m 3.039 ms - -[0m
+[0mGET /climbs [36m304[0m 2.858 ms - -[0m
