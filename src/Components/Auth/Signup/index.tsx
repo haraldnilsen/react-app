@@ -1,6 +1,7 @@
 // React imports
 import React, { FormEvent, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+import supabase from "../../../clients/supabaseClient";
 
 const SignUpBox = () => {
   const [firstName, setFirstName] = useState("");
@@ -9,22 +10,23 @@ const SignUpBox = () => {
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
   const [wrongRepeated, setWrongRepeated] = useState(false);
+  const history = useHistory();
 
   const createUser = async (event: FormEvent) => {
     event.preventDefault();
     if (repeatedPassword === password) {
       try {
-        // await createUserWithEmailAndPassword(firebase.auth(), email, password)
-        // .then(function() {
-        //     return firebase.auth().currentUser?.updateProfile({
-        //         displayName: firstName.concat(" ", lastName)
-        //     });
-        // })
-        // .then(function() {
-        //     const currentUser = firebase.auth().currentUser?.uid;
-        //     setDoc(doc(db as any, "users", currentUser as any), {})
-        // })
-        // await push("/profile");
+        const { data, error } = await supabase.auth.signUp({
+          email: email,
+          password: password,
+          options: {
+            data: {
+              firstName: firstName,
+              lastName: lastName,
+            },
+            emailRedirectTo: "http://localhost:3000/confirmEmail",
+          },
+        });
       } catch (err) {
         console.error(err);
       }

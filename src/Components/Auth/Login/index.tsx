@@ -7,6 +7,7 @@ import supabase from "../../../clients/supabaseClient";
 const LoginBox = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [wrongCredentials, setWrongCredentials] = useState(false);
 
   // Method for routing to another page
   const history = useHistory();
@@ -14,8 +15,15 @@ const LoginBox = () => {
   const signInUser = async (event: FormEvent) => {
     event.preventDefault();
     try {
-      //   await signInWithEmailAndPassword(firebase.auth(), email, password);
-      //   await push("/profile");
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email,
+        password: password,
+      });
+      if (error) {
+        setWrongCredentials(true);
+        return;
+      }
+      history.push("/profile");
     } catch (err) {
       console.error(err);
     }
@@ -26,6 +34,11 @@ const LoginBox = () => {
       <div>
         <div className="bg-white h-auto w-96 hover:shadow-2xl rounded-xl mx-auto">
           <div>
+            {wrongCredentials && (
+              <div className="text-red-500 text-center">
+                Wrong email or password
+              </div>
+            )}
             <form className="flex flex-col p-5" onSubmit={signInUser}>
               <h1 className="text-2xl text-center py-4">Log in</h1>
               <input
@@ -46,12 +59,7 @@ const LoginBox = () => {
           </div>
           <div className="text-lg text-center pb-6">
             <span className="">Don't have a user? Sign up </span>
-            <NavLink
-              exact
-              to="/signup"
-              className="hover:underline"
-              activeClassName="underline"
-            >
+            <NavLink className="text-green-900 underline" to="/signup">
               here
             </NavLink>
           </div>
